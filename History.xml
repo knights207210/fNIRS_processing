@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<history>
+<session>
+<command>%-- Unknown Date --%</command>
+<command execution_time="2189" repeat="4">q2</command>
+<command execution_time="20">clc</command>
+<command execution_time="13">clear</command>
+<command execution_time="587" repeat="2">q2</command>
+<command execution_time="14">clc</command>
+<command execution_time="12">clear</command>
+<command execution_time="130" repeat="11">q2</command>
+</session>
+<session>
+<command time_stamp="15815d5d808">%-- 10/30/16, 7:44 AM --%</command>
+<command execution_time="5788">fdatool</command>
+</session>
+<session>
+<command time_stamp="158c849d445">%-- 12/3/16, 10:23 PM --%</command>
+<command error="true" execution_time="55">1.speed up</command>
+<command error="true" execution_time="77">speed up</command>
+<command execution_time="21">clc</command>
+<command error="true" execution_time="100">speed_up</command>
+<command execution_time="1602">help wavread</command>
+<command execution_time="5986">speed_up</command>
+</session>
+<session>
+<command time_stamp="158c869811c">%-- 12/3/16, 10:58 PM --%</command>
+<command execution_time="3257" repeat="2">speed_up</command>
+<command error="true" execution_time="177">cepstrum</command>
+</session>
+<session>
+<command time_stamp="158c91782b3">%-- 12/4/16, 2:08 AM --%</command>
+<command execution_time="1310" repeat="3">cepstrum</command>
+<command error="true" execution_time="36">LPC analysis</command>
+<command error="true" execution_time="48">lpc analysis</command>
+<command execution_time="517" repeat="2">LPC_analysis</command>
+</session>
+<session>
+<command time_stamp="15a8e4bd9ac">%-- 3/2/17, 2:13 AM --%</command>
+<command execution_time="1746">help findpeaks</command>
+<command execution_time="68">help dur</command>
+<command execution_time="233">help dir</command>
+<command execution_time="54">help DRMF</command>
+<command execution_time="17114">help vision</command>
+<command execution_time="796">help step</command>
+<command execution_time="99">help detectMinEigenFeatures</command>
+<command execution_time="154">help std</command>
+<command execution_time="146">help length</command>
+<command execution_time="150">help speye</command>
+</session>
+<session>
+<command time_stamp="15b24820f7a">%-- 3/31/17, 7:15 AM --%</command>
+<command execution_time="147">HR</command>
+<command execution_time="19" repeat="3">1</command>
+<command execution_time="10">ECG1_trail_1.mat</command>
+<command execution_time="13">1</command>
+<command execution_time="104">1.avi</command>
+<command execution_time="151">HR</command>
+<command execution_time="13" repeat="3">1</command>
+<command execution_time="8">ECG1_trail_1.mat</command>
+<command execution_time="11">1</command>
+<command execution_time="84">1.avi</command>
+<command execution_time="340" repeat="2">HR</command>
+<command execution_time="10" repeat="3">1</command>
+<command execution_time="8">ECG1_trail_1.mat</command>
+<command execution_time="12">1</command>
+<command execution_time="84">1.avi</command>
+<command execution_time="208">HR</command>
+<command execution_time="17" repeat="3">1</command>
+<command execution_time="12">ECg1_trail_1.mat</command>
+<command execution_time="183">HR</command>
+<command execution_time="12" repeat="3">1</command>
+<command execution_time="9">ECG1_trail_1.mat</command>
+<command execution_time="18">1</command>
+<command execution_time="108">1.avi</command>
+<command execution_time="213">HR</command>
+<command execution_time="9" repeat="3">1</command>
+<command execution_time="8">ECG1_trail_1.mat</command>
+<command execution_time="9">1</command>
+<command execution_time="71">1.avi</command>
+<command execution_time="160">HR</command>
+<command execution_time="10" repeat="3">1</command>
+<command execution_time="6">ECG1_trail_1.mat</command>
+<command execution_time="9">1</command>
+<command execution_time="88">1.avi</command>
+<command execution_time="209">HR</command>
+<command execution_time="9" repeat="3">1</command>
+<command execution_time="7">/Users/hanxu/Desktop/thesis/NewFolder</command>
+<command execution_time="11">1</command>
+<command execution_time="78">1.avi</command>
+<command execution_time="50">1</command>
+<command execution_time="234" repeat="2">HR</command>
+<command execution_time="10" repeat="3">1</command>
+<command execution_time="7">/Users/hanxu/Desktop/thesis/NewFolder</command>
+<command execution_time="12">1</command>
+<command execution_time="88">1.avi</command>
+<command execution_time="102">1</command>
+<command execution_time="214">HR</command>
+<command execution_time="8" repeat="3">1</command>
+<command execution_time="8">/Users/hanxu/Desktop/thesis/NewFolder</command>
+<command execution_time="9">1</command>
+<command execution_time="81">1.avi</command>
+<command error="true" execution_time="171">1</command>
+<command execution_time="221">HR</command>
+<command execution_time="9" repeat="3">1</command>
+<command execution_time="8">/Users/hanxu/Desktop/thesis/NewFolder</command>
+<command execution_time="9">1</command>
+<command execution_time="82">1.avi</command>
+<command execution_time="55">1</command>
+<command execution_time="216">HR</command>
+<command execution_time="10" repeat="3">1</command>
+<command execution_time="7">/Users/hanxu/Desktop/thesis/NewFolder</command>
+<command execution_time="9">1</command>
+<command execution_time="80">1.avi</command>
+<command execution_time="39">1</command>
+<command execution_time="250" repeat="2">HR</command>
+<command execution_time="8" repeat="3">1</command>
+<command execution_time="6">/Users/hanxu/Desktop/thesis/NewFolder</command>
+<command execution_time="12">1</command>
+<command execution_time="91">1.avi</command>
+<command execution_time="58">1</command>
+<command execution_time="21">clc</command>
+<command execution_time="25">clear</command>
+<command error="true" execution_time="2801" repeat="6">HR_main</command>
+<command execution_time="20">clc</command>
+<command execution_time="11">clear</command>
+<command error="true" execution_time="2711" repeat="2">HR_main</command>
+<command execution_time="22">clc</command>
+<command execution_time="12">clear</command>
+<command error="true" execution_time="2832">HR_main</command>
+<command error="true" execution_time="107">Hcl</command>
+<command error="true" execution_time="96">cl</command>
+<command execution_time="14">clc</command>
+<command execution_time="12">clear</command>
+<command execution_time="14">clc</command>
+<command execution_time="427" repeat="4">HR_main</command>
+</session>
+<session>
+<command time_stamp="15b3e46b6a9">%-- 4/5/17, 7:21 AM --%</command>
+<command execution_time="25">load('1.mat')</command>
+<command execution_time="164" repeat="2">output_videoprocessed</command>
+<command execution_time="20">clc</command>
+<command execution_time="16">clear</command>
+<command execution_time="195">output_videoprocessed</command>
+<command execution_time="21">clc</command>
+<command execution_time="16">clear</command>
+<command execution_time="19">clc</command>
+<command execution_time="137" repeat="6">output_videoprocessed</command>
+<command execution_time="20">clc</command>
+<command execution_time="17">clear</command>
+<command execution_time="190">output_videoprocessed</command>
+<command execution_time="21">clc</command>
+<command execution_time="17">clear</command>
+<command execution_time="177">output_videoprocessed</command>
+<command execution_time="974">help saveas</command>
+<command execution_time="184">output_videoprocessed</command>
+<command execution_time="25">clc</command>
+<command execution_time="17">clear</command>
+<command execution_time="184">output_videoprocessed</command>
+<command execution_time="22">clc</command>
+<command execution_time="18">clear</command>
+<command execution_time="170">output_videoprocessed</command>
+<command execution_time="17">clc</command>
+<command execution_time="16">clear</command>
+<command execution_time="175">output_videoprocessed</command>
+<command execution_time="19">clc</command>
+<command execution_time="15">clear</command>
+<command execution_time="164">output_videoprocessed</command>
+<command execution_time="25">clc</command>
+<command execution_time="18">clear</command>
+<command execution_time="1785" repeat="2">output_videoprocessed</command>
+<command execution_time="23">clc</command>
+<command execution_time="18">clear</command>
+<command execution_time="1217">output_videoprocessed</command>
+<command execution_time="19">clc</command>
+<command execution_time="17">clear</command>
+<command execution_time="1219">output_videoprocessed</command>
+</session>
+<session>
+<command time_stamp="15b57ae0e43">%-- 4/10/17, 5:44 AM --%</command>
+<command execution_time="378">HR</command>
+<command execution_time="38">1</command>
+<command execution_time="17">2</command>
+<command execution_time="17">1</command>
+<command error="true" execution_time="18852">2</command>
+<command execution_time="62">HR</command>
+<command execution_time="15">1</command>
+<command execution_time="15">3</command>
+<command execution_time="12">1</command>
+<command error="true" execution_time="13371">2</command>
+<command execution_time="69">HR</command>
+<command execution_time="10">1</command>
+<command execution_time="13">2</command>
+<command execution_time="16">1</command>
+<command error="true" execution_time="15184">2</command>
+<command execution_time="186">extractcolortraces</command>
+<command execution_time="81">HR</command>
+<command execution_time="19">1</command>
+<command execution_time="30">2</command>
+<command execution_time="15">1</command>
+<command execution_time="13648">2</command>
+</session>
+<session>
+<command time_stamp="15ba51b115d">%-- 4/25/17, 6:34 AM --%</command>
+<command execution_time="15444" repeat="3">DemoVideo</command>
+<command execution_time="341">bar(SD);</command>
+<command execution_time="76" repeat="2">plot(signal)</command>
+<command error="true" execution_time="43">hold on:</command>
+<command execution_time="21">hold on;</command>
+<command execution_time="20">plot([100,100],'r:');</command>
+<command execution_time="23">plot(signal)</command>
+<command execution_time="70">plot(signal);</command>
+<command execution_time="23">hold on;</command>
+<command execution_time="22">plot([100,100],[0,0.008],'r:');</command>
+<command execution_time="16336" repeat="5">DemoVideo</command>
+<command execution_time="729">help fill</command>
+<command execution_time="16641">DemoVideo</command>
+<command error="true" execution_time="41">motion_elimination</command>
+<command execution_time="16505" repeat="12">DemoVideo</command>
+<command execution_time="18">pos(1)*window_length-half</command>
+<command execution_time="16882">DemoVideo</command>
+<command execution_time="62">figure;</command>
+<command execution_time="23">plot(signal(sVideo.firstFrame:pos(1)*window_length-half));</command>
+<command execution_time="28">pos(1)*window_length-half</command>
+<command execution_time="22">l = signal(sVideo.firstFrame:pos(1)*window_length-half);</command>
+<command batch="1" execution_time="16659" repeat="3">DemoVideo</command>
+<command batch="1">DemoVideo</command>
+<command batch="1" execution_time="58437">DemoVideo</command>
+</session>
+<session>
+<command time_stamp="15bc42e0101">%-- 5/1/17, 7:23 AM --%</command>
+<command batch="2" execution_time="1585" repeat="2">DemoVideo</command>
+<command batch="2">DemoVideo</command>
+</session>
+<session>
+<command time_stamp="15bc441b0ed">%-- 5/1/17, 7:44 AM --%</command>
+<command batch="3">DemoVideo</command>
+</session>
+<session>
+<command time_stamp="15bc442d228">%-- 5/1/17, 7:46 AM --%</command>
+<command batch="4" error="true">DemoVideo</command>
+<command batch="4" error="true">c</command>
+<command batch="4">DemoVideo</command>
+</session>
+<session>
+<command time_stamp="15bc44633c3">%-- 5/1/17, 7:49 AM --%</command>
+<command execution_time="486">DemoVideo</command>
+</session>
+<session>
+<command time_stamp="15bc449f96a">%-- 5/1/17, 7:53 AM --%</command>
+<command execution_time="226" repeat="3">DemoVideo</command>
+<command execution_time="22">mean_value = mean_value_correct;</command>
+<command execution_time="23">clc</command>
+<command execution_time="18">clear</command>
+<command execution_time="1368">DemoVideo</command>
+<command execution_time="20">mean_value == mean_value_correct;</command>
+<command execution_time="85">plot(ans(2));</command>
+<command execution_time="25">plot(ans);</command>
+<command execution_time="78">plot(ans(:,2,:));</command>
+<command execution_time="26">ans2 = ans(2);</command>
+<command error="true" execution_time="29">ans2 = ans(:,2:);</command>
+<command execution_time="26">ans2 = ans(:,2,:);</command>
+<command execution_time="73">plot(ans2);</command>
+<command execution_time="1500" repeat="2">DemoVideo</command>
+<command execution_time="23">mean_value == mean_value_correct;</command>
+<command execution_time="88">plot(mean_value_correct);</command>
+<command execution_time="24">ans1 = (mean_value_correct == sub_mean_value{1});</command>
+<command error="true" execution_time="2829" repeat="5">DemoVideo</command>
+<command error="true" execution_time="54" repeat="2">test</command>
+<command execution_time="1419" repeat="6">DemoVideo</command>
+<command execution_time="31">ans1 = (mean_value_correct == sub_mean_value{1});</command>
+<command execution_time="32">mean_value == mean_value_correct;</command>
+<command execution_time="191217">DemoVideo</command>
+</session>
+<session>
+<command time_stamp="15bc5ca92b4">%-- 5/1/17, 2:53 PM --%</command>
+<command execution_time="1420" repeat="3">DemoVideo</command>
+<command execution_time="24">mean_value == mean_value_correct;</command>
+<command error="true" execution_time="1638" repeat="2">DemoVideo</command>
+<command error="true" execution_time="100">mean_value == mean_value_correct;</command>
+<command error="true" execution_time="26">load(sVideo.pathToColorTraces);</command>
+<command execution_time="1422" repeat="2">DemoVideo</command>
+<command execution_time="21">load(sVideo.pathToColorTraces);</command>
+<command execution_time="1546" repeat="3">DemoVideo</command>
+<command execution_time="24">mean_value == mean_value_correct;</command>
+<command execution_time="34">save(sVideo.pathToColorTraces,'mean_value','sub_mean_value','mean_value_correct');</command>
+<command execution_time="1494">DemoVideo</command>
+<command execution_time="23">mean_value_correct(128)-mean_value_correct(127)</command>
+<command execution_time="26">ans1= (mean_value == mean_value_correct);</command>
+<command execution_time="24">mean_value_correct(128:215)=mean_value_correct(128:215)-ans;</command>
+<command execution_time="1621">DemoVideo</command>
+<command execution_time="18">mean_value(528,:);</command>
+<command execution_time="19">mean_value_correct(128,:)-mean_value_correct(127,:);</command>
+<command error="true" execution_time="32">mean_value_correct(128:215,:) = mean_value_correct(128:215,:)-ans;</command>
+<command error="true" execution_time="30">mean_value_correct(128:215,:) = mean_value_correct(128:215,:).-ans;</command>
+<command execution_time="20">A = mean_value_correct(128:215,:);</command>
+<command execution_time="20">for k =128:215 mean_value_correct(k,:) = mean_value_correct(k,:)-ans; end</command>
+<command execution_time="28">ans1= (mean_value == mean_value_correct);</command>
+<command execution_time="22">mean_value_correct(249,:)-mean_value_correct(248,:);</command>
+<command execution_time="24">for k =249:333 mean_value_correct(k,:) = mean_value_correct(k,:)-ans; end</command>
+<command execution_time="30">save(sVideo.pathToColorTraces,'mean_value','sub_mean_value','mean_value_correct');</command>
+<command execution_time="1517" repeat="3">DemoVideo</command>
+</session>
+<session>
+<command time_stamp="15c17ea83dc">%-- 5/17/17, 1:37 PM --%</command>
+<command execution_time="55">load('withoutglass_fps60.mat')</command>
+<command execution_time="49">load('withglass_fps60.mat')</command>
+<command execution_time="49">load('speaking_fps60.mat')</command>
+<command execution_time="6722">load('rotiate_fps60.mat')</command>
+<command execution_time="27">clc</command>
+<command execution_time="21">clear</command>
+<command execution_time="46">load('speaking_fps60.mat')</command>
+<command execution_time="19">clc</command>
+<command execution_time="19">clear</command>
+<command execution_time="46">load('withoutglass_fps60.mat')</command>
+<command execution_time="44">load('withglass_fps60.mat')</command>
+<command execution_time="43">load('speaking_fps60.mat')</command>
+<command execution_time="40">load('rotiate_fps60.mat')</command>
+<command execution_time="52">load('M13T10.mat')</command>
+<command execution_time="51">load('garageCut.mat')</command>
+<command execution_time="47">load('F9T10.mat')</command>
+<command execution_time="47">load('F5T11.mat')</command>
+<command execution_time="48">load('drivingCut.mat')</command>
+</session>
+<session>
+<command time_stamp="15c20db464d">%-- 5/19/17, 7:17 AM --%</command>
+<command execution_time="27">imread('Fig1_1.tiff');</command>
+<command error="true" execution_time="192">imshow(ans);</command>
+<command execution_time="98" repeat="4">imshow(ans(:,:,1:3));</command>
+</session>
+<session>
+<command time_stamp="15c20e425a8">%-- 5/19/17, 7:27 AM --%</command>
+<command execution_time="319">imread('Fig1_1.tiff');</command>
+<command execution_time="1048">imshow(ans(:,:,1:3));</command>
+<command execution_time="265">imread('1.tiff');</command>
+<command execution_time="369">imshow(ans(:,:,1:3));</command>
+<command execution_time="34">imread('1.tiff');</command>
+<command execution_time="108">imshow(ans(:,:,1:3));</command>
+<command execution_time="41">imread('2.tiff');</command>
+<command execution_time="112" repeat="2">imshow(ans(:,:,1:3));</command>
+<command execution_time="37">imread('3.tiff');</command>
+<command execution_time="114">imshow(ans(:,:,1:3));</command>
+<command execution_time="34">imread('4.tiff');</command>
+<command execution_time="103">imshow(ans(:,:,1:3));</command>
+<command execution_time="40">imread('5.tiff');</command>
+<command execution_time="162">imshow(ans(:,:,1:3));</command>
+<command error="true" execution_time="40">imread('Fig2_1.tiff');</command>
+<command execution_time="36">imread('Fig2_2.tiff');</command>
+<command execution_time="112">imshow(ans(:,:,1:3));</command>
+<command execution_time="341">imread('ECG.png');</command>
+<command execution_time="105">imshow(ans(:,:,1:3));</command>
+<command execution_time="27">imread('PPG.png');</command>
+<command execution_time="118">imshow(ans(:,:,1:3));</command>
+<command error="true" execution_time="29">imread('2_3.png');</command>
+<command execution_time="50">imread('2_3.tiff');</command>
+<command execution_time="106">imshow(ans(:,:,1:3));</command>
+<command error="true" execution_time="42">imread('2_4.jpg');</command>
+<command execution_time="330">imread('2_4a.jpg');</command>
+<command execution_time="111">imshow(ans(:,:,1:3));</command>
+<command execution_time="38">imread('2_4b.jpg');</command>
+<command execution_time="105">imshow(ans(:,:,1:3));</command>
+<command execution_time="38">imread('2_4b.jpg');</command>
+<command execution_time="107">imshow(ans(:,:,1:3));</command>
+<command execution_time="38">imread('2_5.jpg');</command>
+<command execution_time="114">imshow(ans(:,:,1:3));</command>
+<command execution_time="43">imread('2_6.tiff');</command>
+<command execution_time="112">imshow(ans(:,:,1:3));</command>
+<command execution_time="30">imread('2_7.jpg');</command>
+<command execution_time="107">imshow(ans(:,:,1:3));</command>
+<command execution_time="145">imread('386.jpg');</command>
+<command execution_time="187">imshow(ans(:,:,1:3));</command>
+<command execution_time="131">imread('249.jpg');</command>
+<command execution_time="127">imshow(ans(:,:,1:3));</command>
+<command execution_time="133">imread('140.jpg');</command>
+<command execution_time="157">imshow(ans(:,:,1:3));</command>
+<command execution_time="76">imread('3_2b.tiff');</command>
+<command execution_time="108">imshow(ans(:,:,1:3));</command>
+<command execution_time="81">imread('3_2c.tiff');</command>
+<command execution_time="115">imshow(ans(:,:,1:3));</command>
+<command execution_time="29">imread('3_4a.tiff');</command>
+<command execution_time="111">imshow(ans(:,:,1:3));</command>
+<command execution_time="53">imread('3_6.tiff');</command>
+<command execution_time="116">imshow(ans(:,:,1:3));</command>
+<command execution_time="74">load('withglass_fps60.mat');</command>
+<command execution_time="71">figure;</command>
+<command execution_time="134">subplot(2,1,1);</command>
+<command execution_time="78">plot(sum);</command>
+<command execution_time="40">subplot(2,1,2);</command>
+<command execution_time="29">plot(sResult.result_for_plot{1}.normalizedsignal(:,2));</command>
+<command execution_time="26">a =sResult.result_for_plot{1}.normalizedsignal(:,2);</command>
+<command execution_time="27">plot(sResult.result_for_plot{1}.normalizedsignal);</command>
+<command execution_time="74">figure;</command>
+<command execution_time="35">subplot(2,1,1);</command>
+<command execution_time="28">plot(sum(100:600));</command>
+<command execution_time="33">subplot(2,1,2);</command>
+<command execution_time="32">plot(sResult.result_for_plot{1}.normalizedsignal(100:600));</command>
+<command execution_time="31">plot(sResult.result_for_plot{1}.normalizedsignal(140:600));</command>
+<command execution_time="73">figure;</command>
+<command execution_time="33">subplot(2,1,1);</command>
+<command execution_time="29">plot(sum(100:500));</command>
+<command execution_time="32">subplot(2,1,2);</command>
+<command execution_time="30">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command execution_time="69">figure;</command>
+<command execution_time="32">subplot(2,1,1);</command>
+<command execution_time="29">plot(sum(100:500));</command>
+<command execution_time="32">subplot(2,1,2);</command>
+<command execution_time="29">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command execution_time="60">imread('3_4.jpg');</command>
+<command execution_time="459">imshow(ans(:,:,1:3));</command>
+<command execution_time="120">imread('386.jpg');</command>
+<command execution_time="146">imshow(ans(:,:,1:3));</command>
+<command execution_time="38">clc</command>
+<command execution_time="22">clear</command>
+<command execution_time="65">load('withoutglass_fps60.mat');</command>
+<command execution_time="65">figure;</command>
+<command execution_time="57">subplot(2,1,1);</command>
+<command execution_time="29">plot(sum(100:500));</command>
+<command execution_time="30">subplot(2,1,2);</command>
+<command execution_time="27">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command execution_time="71">figure;</command>
+<command execution_time="30">subplot(2,1,1);</command>
+<command execution_time="26">plot(sum(100:500));</command>
+<command execution_time="28">subplot(2,1,2);</command>
+<command execution_time="35">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command error="true" execution_time="49">load('withoutglass_fps60.mat');</command>
+<command execution_time="57">load('rotiate_fps60.mat');</command>
+<command execution_time="73">figure;</command>
+<command execution_time="30">plot(sum(100:500));</command>
+<command execution_time="33">subplot(2,1,2);</command>
+<command error="true" execution_time="29">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command execution_time="80">figure;</command>
+<command execution_time="32">subplot(2,1,1);</command>
+<command error="true" execution_time="72">plot(sum(100:400);</command>
+<command execution_time="28">plot(sum(100:400));</command>
+<command execution_time="32">subplot(2,1,2);</command>
+<command execution_time="28">plot(sResult.result_for_plot{1}.normalizedsignal(140:440));</command>
+<command execution_time="145">imread('140.jpg');</command>
+<command execution_time="133">imshow(ans(:,:,1:3));</command>
+<command execution_time="141">imread('397.jpg');</command>
+<command execution_time="129">imshow(ans(:,:,1:3));</command>
+<command execution_time="126">imread('348.jpg');</command>
+<command execution_time="128">imshow(ans(:,:,1:3));</command>
+<command execution_time="28">clc</command>
+<command execution_time="28">clear</command>
+<command execution_time="52">load('speaking_fps60.mat');</command>
+<command execution_time="71">figure;</command>
+<command execution_time="29">subplot(2,1,1);</command>
+<command execution_time="27">plot(sum(100:500));</command>
+<command execution_time="23">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command execution_time="65">figure;</command>
+<command execution_time="35">subplot(2,1,1);</command>
+<command execution_time="25">plot(sum(100:500));</command>
+<command execution_time="28">subplot(2,1,2);</command>
+<command execution_time="25">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command execution_time="116">imread('182.jpg');</command>
+<command execution_time="119">imshow(ans(:,:,1:3));</command>
+<command execution_time="109">imread('68.jpg');</command>
+<command execution_time="124">imshow(ans(:,:,1:3));</command>
+<command execution_time="109">imread('74.jpg');</command>
+<command execution_time="137">imshow(ans(:,:,1:3));</command>
+<command execution_time="93">imread('6_1.jpg');</command>
+<command execution_time="118">imshow(ans(:,:,1:3));</command>
+</session>
+<session>
+<command time_stamp="15c2f3eca68">%-- 5/22/17, 2:21 AM --%</command>
+<command execution_time="52">load('F5T11.mat')</command>
+<command execution_time="41">load('F9T10.mat')</command>
+<command execution_time="48">load('M13T10.mat')</command>
+<command execution_time="40" repeat="2">load('F9T10.mat')</command>
+</session>
+<session>
+<command time_stamp="15c3203b47a">%-- 5/22/17, 3:15 PM --%</command>
+<command execution_time="388">imread('3_1a.png');</command>
+<command execution_time="1751">imshow(ans(:,:,1:3));</command>
+<command execution_time="34">imread('3_1b.png');</command>
+<command execution_time="115">imshow(ans(:,:,1:3));</command>
+<command execution_time="431">imread('132.jpg');</command>
+<command execution_time="177">imshow(ans(:,:,1:3));</command>
+<command execution_time="32">imread('4_7b.png');</command>
+<command execution_time="107">imshow(ans(:,:,1:3));</command>
+<command execution_time="27">imread('4_8.png');</command>
+<command execution_time="113">imshow(ans(:,:,1:3));</command>
+<command execution_time="26">imread('4_8b.png');</command>
+<command execution_time="119">imshow(ans(:,:,1:3));</command>
+<command execution_time="269">imread('18.jpg');</command>
+<command execution_time="411">imshow(ans(:,:,1:3));</command>
+<command execution_time="53">imread('landmarks1.jpg');</command>
+<command execution_time="111">imshow(ans(:,:,1:3));</command>
+<command execution_time="47">imread('landmarks2.jpg');</command>
+<command execution_time="122">imshow(ans(:,:,1:3));</command>
+</session>
+<session>
+<command time_stamp="15c352856cd">%-- 5/23/17, 5:54 AM --%</command>
+<command execution_time="51">load('withoutglass_fps60.mat')</command>
+<command execution_time="199">figure;</command>
+<command execution_time="1027">subplot(2,1,1);</command>
+<command execution_time="349">plot(sum(100:500));</command>
+<command execution_time="30">subplot(2,1,2);</command>
+<command execution_time="25">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command execution_time="49" repeat="2">load('withglass_fps60.mat')</command>
+<command execution_time="80">figure;</command>
+<command execution_time="30">subplot(2,1,1);</command>
+<command execution_time="25">plot(sum(100:500));</command>
+<command execution_time="25">subplot(2,1,2);</command>
+<command execution_time="25">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command execution_time="21">plot(sResult.result_for_plot{1}.normalizedsignal(130:530));</command>
+<command execution_time="62">figure;</command>
+<command execution_time="28">subplot(2,1,1);</command>
+<command execution_time="24">plot(sum(100:500));</command>
+<command execution_time="27">subplot(2,1,2);</command>
+<command execution_time="29">plot(sResult.result_for_plot{1}.normalizedsignal(130:530));</command>
+</session>
+<session>
+<command time_stamp="15c352fc39e">%-- 5/23/17, 6:02 AM --%</command>
+<command execution_time="44">load('withglass_fps60.mat')</command>
+<command execution_time="153">figure;</command>
+<command execution_time="654">subplot(2,1,1);</command>
+<command execution_time="302">plot(sum(100:500));</command>
+<command execution_time="34">subplot(2,1,2);</command>
+<command execution_time="21">plot(sResult.result_for_plot{1}.normalizedsignal(140:540));</command>
+<command execution_time="78">figure;</command>
+<command execution_time="30">subplot(2,1,1);</command>
+<command execution_time="28">plot(sum(100:500));</command>
+<command execution_time="27">subplot(2,1,2);</command>
+<command execution_time="28">plot(sResult.result_for_plot{1}.normalizedsignal(130:530));</command>
+</session>
+<session>
+<command time_stamp="15f3309924e">%-- 10/18/17, 11:09 PM --%</command>
+<command execution_time="246">imread('WechatIMG7226.bmp');</command>
+<command execution_time="315">ans = imresize(ans,[256,256]);</command>
+<command execution_time="1659">imshow(ans);</command>
+<command execution_time="28">imread('WechatIMG7226.bmp');</command>
+<command execution_time="156">imshow(ans);</command>
+<command execution_time="304">imread('1.jpg');</command>
+<command execution_time="131">imshow(ans);</command>
+<command execution_time="37">ans = imresize(ans,[256,256]);</command>
+<command execution_time="97" repeat="2">imshow(ans);</command>
+<command execution_time="23">imwrite(ans,'1.bmp','bmp');</command>
+</session>
+<session>
+<command time_stamp="15f3682b9b5">%-- 10/19/17, 3:20 PM --%</command>
+<command error="true" execution_time="52">imshow('images.jpeg'0;</command>
+<command error="true" execution_time="22">imread('images.jpeg'0;</command>
+<command execution_time="366">imread('images.jpeg');</command>
+<command execution_time="83">imwrite(ans,'2.bmp','bmp');</command>
+<command execution_time="35">imread('1.jpg');</command>
+<command execution_time="32">imwrite(ans,'3.bmp','bmp');</command>
+<command execution_time="28">imread('1.jpg');</command>
+<command execution_time="25">imwrite(ans,'4.bmp','bmp');</command>
+<command error="true" execution_time="43">imread('images-2.jpg');</command>
+<command execution_time="19">imread('2.jpeg');</command>
+<command execution_time="23">imwrite(ans,'5.bmp','bmp');</command>
+<command execution_time="23">imread('3.jpeg');</command>
+<command execution_time="25">imwrite(ans,'6.bmp','bmp');</command>
+<command execution_time="37">imread('1.jpg');</command>
+<command execution_time="397">ans = imresize(ans,[256,256]);</command>
+<command execution_time="19">imwrite(ans,'6.bmp','bmp');</command>
+<command execution_time="31">imread('1.jpeg');</command>
+<command execution_time="35">ans = imresize(ans,[256,256]);</command>
+<command execution_time="32">imwrite(ans,'7.bmp','bmp');</command>
+<command execution_time="39">imread('10014.jpg');</command>
+<command execution_time="30">ans = imresize(ans,[256,256]);</command>
+<command execution_time="29">imwrite(ans,'7.bmp','bmp');</command>
+<command execution_time="72">imread('1.jpg');</command>
+<command execution_time="62">imwrite(ans,'8.bmp','bmp');</command>
+<command error="true" execution_time="32">imread('1.jpg');</command>
+<command execution_time="29">imread('1.jpeg');</command>
+<command execution_time="33">ans = imresize(ans,[256,256]);</command>
+<command execution_time="30">imwrite(ans,'8.bmp','bmp');</command>
+<command execution_time="30">imwrite(ans,'9.bmp','bmp');</command>
+<command execution_time="30">imread('images.jpeg');</command>
+<command execution_time="31">ans = imresize(ans,[256,256]);</command>
+<command execution_time="29">imwrite(ans,'10.bmp','bmp');</command>
+<command execution_time="27">clear</command>
+<command execution_time="33">clc</command>
+<command execution_time="167">imread('1.bmp');</command>
+<command execution_time="27">imread('2.bmp');</command>
+<command execution_time="25">ans = imresize(ans,[256,256]);</command>
+<command execution_time="24">imwrite(ans,'2.bmp','bmp');</command>
+<command execution_time="25">imread('2.bmp');</command>
+<command execution_time="27">imread('3.bmp');</command>
+<command execution_time="27">ans = imresize(ans,[256,256]);</command>
+<command execution_time="20">imwrite(ans,'3.bmp','bmp');</command>
+<command execution_time="16">clear</command>
+<command execution_time="23">imread('3.bmp');</command>
+<command execution_time="24">imread('4.bmp');</command>
+<command execution_time="19">ans = imresize(ans,[128,128]);</command>
+<command execution_time="24">imwrite(ans,'4.bmp','bmp');</command>
+<command execution_time="17">clear</command>
+<command execution_time="24">imread('4.bmp');</command>
+<command execution_time="26">imread('5.bmp');</command>
+<command execution_time="22">ans = imresize(ans,[256,256]);</command>
+<command execution_time="24">imwrite(ans,'5.bmp','bmp');</command>
+<command execution_time="25">imread('6.bmp');</command>
+<command execution_time="23">imread('7.bmp');</command>
+<command execution_time="47">imread('8.bmp');</command>
+<command execution_time="34">ans = imresize(ans,[256,256]);</command>
+<command execution_time="23">imwrite(ans,'8.bmp','bmp');</command>
+<command execution_time="21">imread('9.bmp');</command>
+<command execution_time="24">imread('10.bmp');</command>
+</session>
+<session>
+<command time_stamp="15fc2d082b6">%-- 11/15/17, 8:12 PM --%</command>
+<command execution_time="381">imread('SGD.png');</command>
+<command error="true" execution_time="96">imwrite(ans,'SGD.eps','eps');</command>
+<command error="true" execution_time="88">imshow</command>
+<command execution_time="1834">imshow(ans)</command>
+<command execution_time="26">imread('ALS.png');</command>
+<command execution_time="105">imshow(ans)</command>
+<command execution_time="31">imread('MCMC.png');</command>
+<command execution_time="117">imshow(ans)</command>
+<command execution_time="23">imread('train_subset1_scaled.png');</command>
+<command execution_time="107" repeat="2">imshow(ans)</command>
+<command execution_time="24">imread('train_subset1_scaled.png');</command>
+<command execution_time="139">imshow(ans)</command>
+<command execution_time="331">imread('train_subset1_scaled.JPG');</command>
+<command execution_time="125">imshow(ans)</command>
+</session>
+<session>
+<command time_stamp="15fe121c69e">%-- 11/21/17, 5:30 PM --%</command>
+<command execution_time="363">imread('sky0.jpeg');</command>
+<command execution_time="1657">imshow(ans)</command>
+<command execution_time="23">imread('sky1.jpeg');</command>
+<command execution_time="107">imshow(ans)</command>
+<command execution_time="32">imread('sky2.jpeg');</command>
+<command execution_time="101">imshow(ans)</command>
+<command execution_time="21">imread('sky3.jpeg');</command>
+<command execution_time="104">imshow(ans)</command>
+</session>
+<session>
+<command time_stamp="15fe12748f6">%-- 11/21/17, 5:36 PM --%</command>
+<command execution_time="338">imread('sky0.jpeg');</command>
+<command execution_time="67">imwrite(ans,'sky0.bmp','bmp');</command>
+<command execution_time="22">imread('sky1.jpeg');</command>
+<command execution_time="25">imwrite(ans,'sky1.bmp','bmp');</command>
+<command execution_time="28">imread('sky2.jpeg');</command>
+<command execution_time="37">imwrite(ans,'sky2.bmp','bmp');</command>
+<command execution_time="26">imread('sky3.jpeg');</command>
+<command execution_time="28">imwrite(ans,'sky3.bmp','bmp');</command>
+<command execution_time="26">imread('sky0.jpeg');</command>
+<command execution_time="35">imwrite(ans,'sky0.bmp','bmp');</command>
+<command error="true" execution_time="44">imread('2180a.jpeg');</command>
+<command execution_time="106">imread('2180a.jpg');</command>
+<command execution_time="118">imwrite(ans,'sky0.bmp','bmp');</command>
+<command execution_time="42">imread('365.jpg');</command>
+<command execution_time="52">imwrite(ans,'sky1.bmp','bmp');</command>
+<command execution_time="38">imread('220.jpg');</command>
+<command execution_time="52">imwrite(ans,'sky1.bmp','bmp');</command>
+<command execution_time="40">imread('220.jpg');</command>
+<command execution_time="56">imwrite(ans,'sky1.bmp','bmp');</command>
+<command execution_time="40">imread('365.jpg');</command>
+<command execution_time="51">imwrite(ans,'sky1.bmp','bmp');</command>
+<command execution_time="343">imread('sky1.png');</command>
+<command execution_time="91">imwrite(ans,'sky1.bmp','bmp');</command>
+</session>
+<session>
+<command time_stamp="15fe7c51bcf">%-- 11/23/17, 12:26 AM --%</command>
+<command execution_time="375">imread('wood.jpg');</command>
+<command execution_time="79">imwrite(ans,'wood.jpg','bmp');</command>
+<command execution_time="502">imread('wood.jpg');</command>
+<command execution_time="172">imwrite(ans,'wood.jpg','bmp');</command>
+<command execution_time="449">imread('wood.jpg');</command>
+<command execution_time="163">imwrite(ans,'wood2.jpg','bmp');</command>
+<command execution_time="152">imwrite(ans,'wood3.jpg','bmp');</command>
+<command execution_time="46">imread('wood.jpg');</command>
+<command execution_time="46">imwrite(ans,'wood.jpg','bmp');</command>
+<command execution_time="38">imwrite(ans,'wood2.jpg','bmp');</command>
+<command execution_time="52">imwrite(ans,'wood3.jpg','bmp');</command>
+</session>
+<session>
+<command time_stamp="15ff0716438">%-- 11/24/17, 4:51 PM --%</command>
+<command execution_time="329">imread('fire.jpg');</command>
+<command execution_time="69">imwrite(ans,'wood.bmp','bmp');</command>
+<command error="true" execution_time="48">imread('particles3.tga');</command>
+<command error="true" execution_time="145">imread('particle3.tga');</command>
+</session>
+<session>
+<command time_stamp="15ff0b5f826">%-- 11/24/17, 6:06 PM --%</command>
+<command execution_time="336">imread('large.png');</command>
+<command execution_time="76">imwrite(ans,'fire.bmp','bmp');</command>
+</session>
+<session>
+<command time_stamp="16000bf776a">%-- 11/27/17, 8:50 PM --%</command>
+<command execution_time="33">A = {-2.0,0.0,0.0}</command>
+<command execution_time="20">clear</command>
+<command execution_time="21">A = [-2.0,0.0,0.0]</command>
+<command execution_time="19">B = [-1.0,-2.0,-1.0]</command>
+<command execution_time="38">C = cross(A,B)</command>
+<command execution_time="18">A = [0.0,0.0,-2.0]</command>
+<command execution_time="26">B = [1.0,-2.0,-1.0]</command>
+<command execution_time="32">C = cross(A,B)</command>
+<command execution_time="25">A = [2.0,0.0,0.0]</command>
+<command execution_time="24">B = [1.0,-2.0,1.0]</command>
+<command execution_time="29">C = cross(A,B)</command>
+<command execution_time="24">A = [0.0,0.0,2.0]</command>
+<command execution_time="24">B = [-1.0,-2.0,1.0]</command>
+<command execution_time="29">C = cross(A,B)</command>
+</session>
+<session>
+<command time_stamp="16000f1c328">%-- 11/27/17, 9:45 PM --%</command>
+<command execution_time="360">imread('tree.jpg');</command>
+<command execution_time="100">imwrite(ans,'tree.bmp','bmp');</command>
+<command execution_time="308">ans = imresize(ans,[256,256]);</command>
+<command execution_time="30">imwrite(ans,'tree.bmp','bmp');</command>
+<command execution_time="226">imread('sky1.bmp');</command>
+<command execution_time="68">ans = imresize(ans,[256,256]);</command>
+<command execution_time="23">imwrite(ans,'sky1.bmp','bmp');</command>
+<command execution_time="94">imread('sky1.bmp');</command>
+<command execution_time="64">ans = imresize(ans,[1024,2048]);</command>
+<command execution_time="78">imwrite(ans,'sky1.bmp','bmp');</command>
+<command execution_time="103">imread('sky0.bmp');</command>
+<command execution_time="68">ans = imresize(ans,[1024,2048]);</command>
+<command execution_time="84">imwrite(ans,'sky0.bmp','bmp');</command>
+</session>
+<session>
+<command time_stamp="160065c30f9">%-- 11/28/17, 10:59 PM --%</command>
+<command execution_time="358">imread('chair.jpg');</command>
+<command execution_time="313">ans = imresize(ans,[256,256]);</command>
+<command execution_time="70">imwrite(ans,'chair.bmp','bmp');</command>
+<command execution_time="23" repeat="2">imread('teapot.jpg');</command>
+<command execution_time="42">ans = imresize(ans,[2048,1024]);</command>
+<command error="true" execution_time="59">imread('chair.jpg');</command>
+<command execution_time="22">imread('teapot.jpg');</command>
+<command execution_time="19">ans = imresize(ans,[128,256]);</command>
+<command execution_time="51">imwrite(ans,'teapot.bmp','bmp');</command>
+<command execution_time="50">imread('teapot.jpg');</command>
+<command execution_time="40">ans = imresize(ans,[512,512]);</command>
+<command execution_time="36">imwrite(ans,'teapot.bmp','bmp');</command>
+</session>
+<session>
+<command time_stamp="160142fa046">%-- 12/1/17, 3:25 PM --%</command>
+<command execution_time="337">imread('Tex_0038_0.png');</command>
+<command execution_time="82">imwrite(ans,'Tex_0038_0.bmp','bmp');</command>
+<command execution_time="27">imwrite(ans,'Tex_0038_0.png','bmp');</command>
+<command execution_time="45">imread('BaseballBat.png');</command>
+<command execution_time="27">imwrite(ans,'BaseballBat.png','bmp');</command>
+<command execution_time="24">imread('bat_all.png');</command>
+<command execution_time="21">imwrite(ans,'bat_all.png','bmp');</command>
+</session>
+<session>
+<command time_stamp="160320fb41a">%-- 12/7/17, 10:39 AM --%</command>
+<command execution_time="346">imread('skSnitchTex0.png');</command>
+<command execution_time="98">imwrite(ans,'skSnitchTex0.png','bmp');</command>
+<command execution_time="1786">imshow(ans);</command>
+<command execution_time="27">imread('skSnitchTex0.png');</command>
+<command execution_time="108">imshow(ans);</command>
+<command execution_time="144">imread('skSnitchTex0.bmp');</command>
+<command execution_time="31">imread('skSnitchTex0.png');</command>
+<command execution_time="33">imread('Tex_0038_0.png');</command>
+<command execution_time="23" repeat="2">imread('skSnitchTex0.png');</command>
+</session>
+<session>
+<command time_stamp="160324198a6">%-- 12/7/17, 11:34 AM --%</command>
+<command execution_time="364">imread('Snitch.png');</command>
+<command execution_time="83">imwrite(ans,'Snitch.png','bmp');</command>
+<command execution_time="20">imread('Snitch2.png');</command>
+<command execution_time="33">imwrite(ans,'Snitch2.png','bmp');</command>
+<command execution_time="20">imread('ME_snitchwing1_SL.png');</command>
+<command execution_time="21">imwrite(ans,'ME_snitchwing1_SL.png','bmp');</command>
+<command execution_time="25">imread('Tex_0024_0.png');</command>
+<command execution_time="24">imwrite(ans,'Tex_0024_0.png','bmp');</command>
+<command execution_time="27">imread('BirdBody_0.png');</command>
+<command error="true" execution_time="117">imwrite(ans,'BirdBody_0.png','bmp');</command>
+<command execution_time="22">imread('BirdSS01.png');</command>
+<command execution_time="27">imwrite(ans,'BirdSS01.png','bmp');</command>
+<command execution_time="19">imread('BirdSS00.png');</command>
+<command execution_time="22">imwrite(ans,'BirdSS00.png','bmp');</command>
+</session>
+<session>
+<command time_stamp="16056c4ba7c">%-- 12/14/17, 1:43 PM --%</command>
+<command execution_time="357">imread('GBM.png');</command>
+<command execution_time="1929">imshow(ans);</command>
+<command execution_time="32">imread('SVM.png');</command>
+<command execution_time="113">imshow(ans);</command>
+<command execution_time="30">imread('LR.png');</command>
+<command execution_time="104">imshow(ans);</command>
+<command execution_time="29">imread('RF.png');</command>
+<command execution_time="104">imshow(ans);</command>
+<command execution_time="29">imread('Ada.png');</command>
+<command execution_time="111">imshow(ans);</command>
+<command execution_time="29">imread('NN.png');</command>
+<command execution_time="105">imshow(ans);</command>
+<command execution_time="31">imread('BL.png');</command>
+<command execution_time="124">imshow(ans);</command>
+<command execution_time="62">imread('model.png');</command>
+<command execution_time="114" repeat="2">imshow(ans);</command>
+</session>
+<session>
+<command time_stamp="160fd8ab53a">%-- 1/15/18, 10:56 PM --%</command>
+<command execution_time="385">imread('TBT.jpg');</command>
+<command execution_time="1880">imshow(ans);</command>
+<command execution_time="22">imread('IML.jpg');</command>
+<command execution_time="107">imshow(ans);</command>
+<command execution_time="26">imread('CML.jpg');</command>
+<command execution_time="109">imshow(ans);</command>
+</session>
+<session>
+<command time_stamp="16135cae3fb">%-- 1/26/18, 9:05 PM --%</command>
+<command execution_time="45">imread('canada.jpg');</command>
+<command error="true" execution_time="79">imread('IML.jpg');</command>
+<command execution_time="109" repeat="3">imshow(ans);</command>
+<command execution_time="41">imread('1.jpg');</command>
+<command execution_time="103">imshow(ans);</command>
+</session>
+<session>
+<command time_stamp="167aebf2e13">%-- 12/14/18, 3:03 PM --%</command>
+<command execution_time="401">imread('1.png');</command>
+<command execution_time="2029">imshow(ans);</command>
+</session>
+<session>
+<command time_stamp="167efc852b9">%-- 12/27/18, 6:09 AM --%</command>
+<command execution_time="3095" repeat="3">eeglab</command>
+</session>
+<session>
+<command time_stamp="167f5a078e2">%-- 12/28/18, 9:23 AM --%</command>
+<command execution_time="32">a = [0,1,2]</command>
+<command error="true" execution_time="59">b = a(:2,3)</command>
+<command execution_time="20">b = a(:,2:3)</command>
+</session>
+<session>
+<command time_stamp="16809931f7a">%-- 1/1/19, 6:21 AM --%</command>
+<command execution_time="6334">eeglab</command>
+</session>
+<session>
+<command time_stamp="1694f1dcce8">%-- 3/5/19, 11:29 AM --%</command>
+<command error="true" execution_time="73">read_dimetek</command>
+<command error="true" execution_time="28">read_dimetek(1.ECG,0,10)</command>
+<command error="true" execution_time="26">read_dimetek(1.ECG,0,10);</command>
+<command error="true" execution_time="40">read_dimetek(hrv.ECG,0,10);</command>
+<command error="true" execution_time="26">read_dimetek("hrv.ECG",0,10);</command>
+<command execution_time="41">read_dimetek('hrv.ECG',0,10);</command>
+<command execution_time="34" repeat="2">read_dimetek('hrv.ECG',0,100000000000);</command>
+</session>
+<session>
+<command time_stamp="1694f445326">%-- 3/5/19, 12:11 PM --%</command>
+<command execution_time="59">read_binAnn('hrv.ECG',100000000)</command>
+<command error="true" execution_time="76">[ihsneHeader, Ann, Rloc, RR] = read_binAnn('hrv.ECG',100000000)</command>
+<command error="true" execution_time="64">[ihsneHeader, Ann, Rloc, RR] = read_binAnn('hrv.ECG',10)</command>
+<command error="true" execution_time="67" repeat="2">[ihsneHeader, Ann, Rloc, RR] = read_ishne('hrv.ECG',100000000)</command>
+<command execution_time="774">[ihsneHeader, Ann, Rloc, RR] = read_ishne('1.ecg',100000000)</command>
+<command error="true" execution_time="64">[ihsneHeader, Ann, Rloc, RR] = read_ishne('hrv.ecg',100000000)</command>
+<command execution_time="4352">main</command>
+</session>
+<session>
+<command time_stamp="16950250e64">%-- 3/5/19, 4:16 PM --%</command>
+<command execution_time="2775">[ihsneHeader, Ann, Rloc, RR] = read_ishne('hrv1.ECG',100000000)</command>
+<command execution_time="670">[ihsneHeader, Ann, Rloc, RR] = read_ishne('1.ecg',100000000)</command>
+<command execution_time="4563">main</command>
+<command execution_time="30">clc</command>
+<command error="true" execution_time="868">clean</command>
+<command execution_time="19">clear</command>
+<command execution_time="23">clc</command>
+</session>
+<session>
+<command time_stamp="16950d2197c">%-- 3/5/19, 7:25 PM --%</command>
+<command execution_time="4682">main</command>
+<command execution_time="625" repeat="2">[ihsneHeader, Ann, Rloc, RR] = read_ishne('1-3.ECG',100000000)</command>
+<command execution_time="666">[ihsneHeader, Ann, Rloc, RR] = read_ishne('1.ecg',100000000)</command>
+</session>
+<session>
+<command time_stamp="16950feee3a">%-- 3/5/19, 8:14 PM --%</command>
+<command execution_time="2617">[ihsneHeader, Ann, Rloc, RR] = read_ishne('HRV(1).ECG',100000000)</command>
+</session>
+<session>
+<command time_stamp="16d661f9ad7">%-- 9/24/19, 7:53 PM --%</command>
+<command error="true" execution_time="1111">Signal Processing Toolbox</command>
+<command error="true" execution_time="52">sign Processing Toolbox clear</command>
+<command execution_time="18">clear</command>
+<command execution_time="22">clc</command>
+<command batch="5" error="true">registration_demo</command>
+<command batch="5" error="true">registration_demo</command>
+<command batch="5" error="true">registration_demo</command>
+<command batch="5" error="true" execution_time="52656">registration_demo</command>
+<command error="true" execution_time="4794">forward_model_demo</command>
+<command error="true" execution_time="9922">registration_demo</command>
+<command execution_time="64976">sample_bootstrap</command>
+</session>
+<session>
+<command time_stamp="16d68c9ccd7">%-- 9/25/19, 8:18 AM --%</command>
+<command execution_time="193">mcrinstaller</command>
+</session>
+<session>
+<command time_stamp="16d73f3b9ec">%-- 9/27/19, 12:20 PM --%</command>
+<command execution_time="2846">raw = nirs.testing.simData</command>
+<command execution_time="3439">raw.draw</command>
+<command execution_time="1026">raw.gui</command>
+<command execution_time="76">raw.probe</command>
+<command execution_time="236">raw.probe.draw</command>
+<command execution_time="367">raw.draw</command>
+<command execution_time="46">job = nirs.modules.OpticalDensity</command>
+<command execution_time="44">job = nirs.modules.BeerLambertLaw(job)</command>
+<command execution_time="491">hb = job.run(raw)</command>
+<command execution_time="39">hb</command>
+<command execution_time="388">hb.draw</command>
+<command execution_time="616">hb.gui</command>
+<command execution_time="80">job</command>
+<command execution_time="49">job.PPF = [6,7]</command>
+<command execution_time="75">job = nirs.modules.GLM</command>
+<command execution_time="75">job.type = '?'</command>
+<command execution_time="12146">SubjStats = job.run(hb)</command>
+<command execution_time="1149">SubjStats.draw</command>
+<command error="true" execution_time="82">SubjStats.draw('tstat',[]. 'p&lt;0.05')</command>
+<command execution_time="670">SubjStats.draw('tstat',[], 'p&lt;0.05')</command>
+<command execution_time="396">SubjStats.gui</command>
+<command execution_time="146" repeat="2">cd ..</command>
+<command execution_time="166">cd Downloads/</command>
+<command error="true" execution_time="1089">raw = nirs.io.loadNIRx('NIRx_data_SS')</command>
+<command execution_time="142">cd Files</command>
+<command execution_time="119">cd DataSets/</command>
+<command error="true" execution_time="123">raw = nirs.io.loadNIRx('FingerTapping2')</command>
+<command execution_time="167">clear</command>
+<command error="true" execution_time="512">clcl</command>
+<command execution_time="57">clc</command>
+<command error="true" execution_time="44">nirs.io.load('2019-01-30_001/')</command>
+<command execution_time="157">ls</command>
+<command error="true" execution_time="203">nirs</command>
+<command execution_time="555">raw = nirs.testing.simData</command>
+<command execution_time="156">cd ..</command>
+<command execution_time="144">cd TrainingData/</command>
+<command execution_time="125">cd Mom/</command>
+<command execution_time="105">cd Good/</command>
+<command execution_time="116">cd 2019-01-30_001/</command>
+<command error="true" execution_time="39">nirs.io.load('2019-01-30_001/')</command>
+<command error="true" execution_time="43">raw = nirs.io.load('2019-01-30_001/')</command>
+<command execution_time="119" repeat="4">cd ..</command>
+<command execution_time="504">raw = nirs.testing.simData</command>
+<command error="true" execution_time="44">raw = nirs.io.load('2019-01-30_001/')</command>
+<command execution_time="289">nirs.testing.simData</command>
+<command error="true" execution_time="88">nirs.io</command>
+<command error="true" execution_time="42">nirs.testing</command>
+<command execution_time="291">nirs.testing.simData</command>
+<command error="true" execution_time="1717">raw = nirs.io.loadNIRx('2019-01-30_001')</command>
+</session>
+<session>
+<command time_stamp="16d9382c0e6">%-- 10/3/19, 3:24 PM --%</command>
+<command execution_time="3639">nirs.viz.nirsviewer</command>
+</session>
+<session>
+<command time_stamp="16e443fd710">%-- 11/6/19, 10:04 PM --%</command>
+<command execution_time="145">addpath('/Users/hanxu/Downloads/spm12')</command>
+<command execution_time="91">addpath('/Users/hanxu/Downloads/NITRC-multi-file-downloads/spm_fnirs')</command>
+<command execution_time="1321" repeat="2">spm_fnirs</command>
+<command execution_time="385991">spm_fnirs_read_nirscout;</command>
+<command execution_time="31">clear</command>
+<command execution_time="44">clc</command>
+<command execution_time="41">durations = names</command>
+<command error="true" execution_time="44">durations[2]</command>
+<command execution_time="38">durations(2)</command>
+<command error="true" execution_time="39">durations(3) = 5</command>
+<command execution_time="81">clear</command>
+<command execution_time="41">clc</command>
+<command execution_time="78">raw = nirs.io.loadDirectory(root_dir,{'Group','Subject'},{@nirs.io.loadDotNirs},{'.nirs'});</command>
+</session>
+<session>
+<command time_stamp="16e44e9c824">%-- 11/7/19, 1:10 AM --%</command>
+<command batch="6">clear</command>
+<command batch="6">infant_cry_pv_analysis20190408</command>
+</session>
+<session>
+<command time_stamp="16e46b8c841">%-- 11/7/19, 9:35 AM --%</command>
+<command error="true" execution_time="30" repeat="2">nirs.vis</command>
+<command execution_time="3580">nirs.viz.nirsviewer;</command>
+<command execution_time="75">clear</command>
+<command execution_time="40">clc</command>
+<command error="true" execution_time="312">NIRS_SPM</command>
+<command execution_time="166">addpath('/Users/hanxu/Downloads/fNIRS/NIRS_SPM_v4_r1')</command>
+<command execution_time="135">addpath('/Users/hanxu/Downloads/fNIRS/spm5')</command>
+<command execution_time="177" repeat="3">NIRS_SPM</command>
+<command execution_time="206">addpath('/Users/hanxu/Downloads/homer2')</command>
+<command error="true" execution_time="229">homer2</command>
+<command error="true" execution_time="194">Homer2</command>
+<command error="true" execution_time="76">Homer2_UI</command>
+<command error="true" execution_time="493">AtlasViewerGUI</command>
+<command execution_time="151">addpath('/Users/hanxu/Downloads/homer2_src_v2_3_10202017')</command>
+<command error="true" execution_time="67">Homer2_UI</command>
+</session>
+<session>
+<command time_stamp="16e4e825de6">%-- 11/8/19, 9:53 PM --%</command>
+<command execution_time="1985">NIRS_SPM</command>
+<command execution_time="206">addpath('/Users/hanxu/Downloads/fNIRS/NIRS_SPM_v4_r1')</command>
+<command execution_time="136">addpath('/Users/hanxu/Downloads/fNIRS/spm5')</command>
+<command execution_time="201" repeat="2">NIRS_SPM</command>
+<command execution_time="196">addpath('/Users/hanxu/Downloads/homer2_src_v2_3_10202017')</command>
+<command error="true" execution_time="625">Homer2_UI</command>
+<command execution_time="205">NIRS_SPM</command>
+<command execution_time="148">addpath('/Users/hanxu/Downloads/spm12')</command>
+<command execution_time="101">addpath('/Users/hanxu/Downloads/NITRC-multi-file-downloads/spm_fnirs')</command>
+<command execution_time="254">NIRS_SPM</command>
+<command execution_time="418">spm_fnirs</command>
+<command execution_time="783550">spm_fnirs_read_nirscout</command>
+<command execution_time="1289">spm_fnirs</command>
+</session>
+<session>
+<command time_stamp="16e4f21d34d">%-- 11/9/19, 12:47 AM --%</command>
+<command execution_time="159">addpath('/Users/hanxu/Downloads/fNIRS/NIRS_SPM_v4_r1')</command>
+<command execution_time="149">addpath('/Users/hanxu/Downloads/fNIRS/spm5')</command>
+<command execution_time="176" repeat="2">NIRS_SPM</command>
+</session>
+<session>
+<command time_stamp="16e5c43fabe">%-- 11/11/19, 1:59 PM --%</command>
+<command execution_time="225">addpath('/Users/hanxu/Downloads/fNIRS/NIRS_SPM_v4_r1')</command>
+<command execution_time="122">addpath('/Users/hanxu/Downloads/fNIRS/spm5')</command>
+<command execution_time="156" repeat="4">NIRS_SPM</command>
+</session>
+<session>
+<command time_stamp="16e625a3639">%-- 11/12/19, 6:21 PM --%</command>
+<command execution_time="551">addpath('/Users/hanxu/Downloads/fNIRS/NIRS_SPM_v4_r1')</command>
+<command execution_time="156">addpath('/Users/hanxu/Downloads/fNIRS/spm5')</command>
+<command execution_time="323" repeat="2">NIRS_SPM</command>
+<command execution_time="535">addpath('/Users/hanxu/Downloads/spm12')</command>
+<command execution_time="103">addpath('/Users/hanxu/Downloads/NITRC-multi-file-downloads/spm_fnirs')</command>
+<command execution_time="754">spm_fnirs</command>
+<command execution_time="96059">spm_fnirs_read_nirscout</command>
+<command execution_time="1080">spm_fnirs</command>
+<command execution_time="31216">spm_fnirs_read_nirscout</command>
+</session>
+<session>
+<command time_stamp="16e63d31ba0">%-- 11/13/19, 1:13 AM --%</command>
+<command execution_time="142">addpath('/Users/hanxu/Downloads/fNIRS/spm5')</command>
+<command execution_time="111">addpath('/Users/hanxu/Downloads/fNIRS/spm_fnirs')</command>
+<command execution_time="81">addpath('/Users/hanxu/Downloads/spm_fnirs')</command>
+<command execution_time="101">addpath('/Users/hanxu/Downloads/spm12')</command>
+<command execution_time="866" repeat="4">spm_fnirs</command>
+<command execution_time="27">clear</command>
+<command execution_time="29">clc</command>
+</session>
+<session>
+<command time_stamp="16e65f0e101">%-- 11/13/19, 11:05 AM --%</command>
+<command execution_time="144">addpath('/Users/hanxu/Downloads/fNIRS/spm5')</command>
+<command execution_time="84">addpath('/Users/hanxu/Downloads/spm_fnirs')</command>
+<command execution_time="114">addpath('/Users/hanxu/Downloads/spm12')</command>
+<command execution_time="94">addpath('/Users/hanxu/Downloads/fNIRS/NIRS_SPM_v4_r1')</command>
+<command execution_time="254" repeat="2">NIRS_SPM</command>
+<command execution_time="558">spm_fnirs</command>
+<command execution_time="32391">spm_fnirs_read_nirscout</command>
+</session>
+<session>
+<command time_stamp="16e66129f15">%-- 11/13/19, 11:42 AM --%</command>
+<command execution_time="326">addpath('/Users/hanxu/Downloads/spm12')</command>
+<command execution_time="94">addpath('/Users/hanxu/Downloads/spm_fnirs')</command>
+<command execution_time="2078">spm_fnirs</command>
+<command execution_time="3760" repeat="2">spm_fnirs_read_nirscout</command>
+<command execution_time="1238">spm_fnirs</command>
+<command execution_time="121">addpath('/Users/hanxu/Downloads/fNIRS/spm5')</command>
+<command execution_time="85">addpath('/Users/hanxu/Downloads/fNIRS/NIRS_SPM_v4_r1')</command>
+<command execution_time="325">NIRS_SPM</command>
+<command execution_time="1786">spm_fnirs</command>
+<command execution_time="31">clc</command>
+<command execution_time="23">clear</command>
+<command execution_time="1321">spm_fnirs</command>
+</session>
+<session>
+<command time_stamp="16e6c773c02">%-- 11/14/19, 5:29 PM --%</command>
+<command error="true" execution_time="22770">run('/Users/hanxu/Downloads/HomerOfflineConverter.m')</command>
+<command execution_time="654">edit huppertt-nirs-toolbox-df780b1c7074/demos/fnirs_analysis_demo.m</command>
+<command execution_time="36">folder = '/Users/hanxu/Downloads/TrainingData/Nirs_toolbox'</command>
+<command error="true" execution_time="3318">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+<command execution_time="133">ls</command>
+<command execution_time="195">cd huppertt-nirs-toolbox-df780b1c7074/</command>
+<command execution_time="44">ls</command>
+<command execution_time="135">cd ..</command>
+<command execution_time="115">cd TrainingData/</command>
+<command execution_time="42">ls</command>
+<command execution_time="132">cd Nirs_toolbox/</command>
+<command execution_time="44">ls</command>
+<command error="true" execution_time="101">folder = '/Users/hanxu/Downloads/fNIRS\ QC_ShP/5084/PV1/MOC/nirs/2019-05-10_002</command>
+<command execution_time="43">folder = '/Users/hanxu/Downloads/fNIRS\ QC_ShP/5084/PV1/MOC/nirs/2019-05-10_002'</command>
+<command execution_time="60">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+<command execution_time="26">clear</command>
+<command execution_time="39">clc</command>
+<command execution_time="30">folder = '/Users/hanxu/Downloads/fNIRS\ QC_ShP/5084/PV1/MOC/nirs/2019-05-10_002'</command>
+<command execution_time="47">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+<command execution_time="24">folder = '/Users/hanxu/Downloads/fNIRS\ QC_ShP/5084/PV1/MOC/nirs'</command>
+<command execution_time="49">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+<command execution_time="34">folder = '/Users/hanxu/Downloads/TrainingData/Nirs_toolbox'</command>
+<command execution_time="23">folder = '/Users/hanxu/Downloads/prelim_data/5084'</command>
+<command error="true" execution_time="3421">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+<command execution_time="3486">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5084/2019-05-10_002/')</command>
+<command error="true" execution_time="2888">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+</session>
+<session>
+<command time_stamp="16e6cd43995">%-- 11/14/19, 7:11 PM --%</command>
+<command execution_time="45">folder = '/Users/hanxu/Downloads/prelim_data/5084'</command>
+<command error="true" execution_time="3867" repeat="4">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+<command execution_time="44">probeInfo.probes</command>
+<command execution_time="46">probeInfo.probes.coords_s2</command>
+<command execution_time="28">probeInfo.probes.coords_d2</command>
+<command error="true" execution_time="3588">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+<command execution_time="80">folder = '/Users/hanxu/Downloads/demo_data/data/G1/S4'</command>
+<command execution_time="205">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+<command execution_time="39">clear</command>
+<command execution_time="36">clc</command>
+<command execution_time="32">folder = '/Users/hanxu/Downloads/prelim_data/1'</command>
+<command execution_time="249">raw = nirs.io.loadDirectory(folder, {'subject'});</command>
+<command execution_time="66">folder = '/Users/hanxu/Downloads/prelim_data/5088'</command>
+<command execution_time="30">clear</command>
+<command execution_time="33">clc</command>
+<command execution_time="32">folder = '/Users/hanxu/Downloads/prelim_data/5088'</command>
+<command execution_time="28">clc</command>
+<command execution_time="29">clear</command>
+<command execution_time="4491">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5088/2019-05-29_003')</command>
+<command execution_time="3432">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5090/2019-08-12_001')</command>
+<command execution_time="33">HomerOfflineConverter('')</command>
+<command execution_time="3833">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5092/2019-06-20_001')</command>
+<command execution_time="3209">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5093/2019-06-19_001')</command>
+<command execution_time="3129">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5094/2019-06-20_002')</command>
+<command execution_time="25">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5095')</command>
+<command execution_time="3188">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5095/2019-08-28_002')</command>
+<command execution_time="3160">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5096/2019-06-28_001')</command>
+<command execution_time="3207">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5097/2019-07-11_001')</command>
+<command execution_time="3897">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5098/2019-07-08_001')</command>
+<command execution_time="3469">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5100/2019-09-19_001')</command>
+<command execution_time="3172">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5101/2019-08-15_001')</command>
+<command execution_time="3486">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5102/2019-08-08_002')</command>
+<command execution_time="3133">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5103/2019-08-14_001')</command>
+<command execution_time="3081">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5105/2019-08-27_001')</command>
+<command execution_time="3146">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5108/2019-08-28_003')</command>
+<command execution_time="3128">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5111/2019-09-18_002')</command>
+<command execution_time="3348">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5112/2019-09-23_001')</command>
+<command execution_time="3159">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5116/2019-09-30_001')</command>
+<command execution_time="3146">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5117/2019-10-02_002')</command>
+<command execution_time="29">clc</command>
+<command execution_time="95">root_dir = '/Users/hanxu/Downloads/prelim_data_nirs'</command>
+<command execution_time="50" repeat="2">raw = nirs.io.loadDirectory([root_dir filesep 'demo_data' filesep 'data'], {'group', 'subject'});</command>
+<command execution_time="2764">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="84">demographics = nirs.createDemographicsTable(raw);</command>
+<command execution_time="128">demographics</command>
+<command execution_time="42">raw</command>
+<command execution_time="44">raw = raw(1:4:end);</command>
+<command execution_time="47">raw</command>
+<command execution_time="65">raw = nirs.io.loadDirectory([root_dir filesep 'demo_data' filesep 'data'], {'group', 'subject'});</command>
+<command execution_time="2702">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="65">j = nirs.modules.RemoveStimless( );</command>
+<command execution_time="36">j = nirs.modules.RenameStims( j );</command>
+<command execution_time="51">unique(nirs.getStimNames(raw));</command>
+<command execution_time="49">nirs.modules.KeepStims</command>
+<command execution_time="37">unique(nirs.getStimNames(raw));</command>
+<command execution_time="38">nirs.modules.KeepStims({'stim_channel6', 'stim_channel7'})</command>
+<command execution_time="39">nirs.modules.KeepStims</command>
+<command execution_time="42" repeat="2">nirs.modules.KeepStims({'stim_channel6', 'stim_channel7'})</command>
+<command batch="7">j.listOfChanges = {</command>
+<command batch="7">'A', 'cry';</command>
+<command batch="7" execution_time="73">'B', 'noise'};</command>
+<command execution_time="30">j = nirs.modules.Resample( j );</command>
+<command execution_time="26">j.Fs = 7.8125;</command>
+<command execution_time="28">j = nirs.modules.TrimBaseline( j );</command>
+<command batch="8">j.preBaseline  = 1;</command>
+<command batch="8" execution_time="36">j.postBaseline = 1;</command>
+<command execution_time="27">j = nirs.modules.OpticalDensity( j );</command>
+<command execution_time="43">j = nirs.modules.BeerLambertLaw( j );</command>
+<command execution_time="8682">hb = j.run( raw );</command>
+<command execution_time="76">clear</command>
+<command execution_time="27">clc</command>
+<command execution_time="27">root_dir = '/Users/hanxu/Downloads/prelim_data_nirs'</command>
+<command execution_time="2622">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="54">demographics = nirs.createDemographicsTable(raw);</command>
+<command execution_time="30">j = nirs.modules.RemoveStimless( );</command>
+<command execution_time="26">j = nirs.modules.RenameStims( j );</command>
+<command execution_time="43">j = nirs.modules.KeepStims({'stim_channel6', 'stim_channel7'})</command>
+<command execution_time="27">j = nirs.modules.RemoveStimless( );</command>
+<command execution_time="28">j = nirs.modules.RenameStims( j );</command>
+<command execution_time="35">j = nirs.modules.KeepStims({'stim_channel6', 'stim_channel7'})</command>
+<command batch="9">j.listOfChanges = {</command>
+<command batch="9">cler</command>
+<command batch="9">clear</command>
+</session>
+<session>
+<command time_stamp="16e6de8e9d1">%-- 11/15/19, 12:13 AM --%</command>
+<command execution_time="33">root_dir = '/Users/hanxu/Downloads/prelim_data_nirs'</command>
+<command execution_time="3836">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="87">demographics = nirs.createDemographicsTable(raw);</command>
+<command execution_time="44">j = nirs.modules.RemoveStimless( );</command>
+<command execution_time="37">j = nirs.modules.RenameStims( j );</command>
+<command execution_time="56">j = nirs.modules.KeepStims({'stim_channel6', 'stim_channel7'})</command>
+<command batch="10" error="true">j.listOfChanges = {</command>
+<command batch="10" error="true">'A', 'cry';</command>
+<command batch="10" error="true" execution_time="67">'B', 'noise'};</command>
+<command execution_time="48">clear</command>
+<command execution_time="35">root_dir = '/Users/hanxu/Downloads/prelim_data_nirs'</command>
+<command execution_time="2650">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="49">demographics = nirs.createDemographicsTable(raw);</command>
+<command execution_time="27">j = nirs.modules.RemoveStimless( );</command>
+<command execution_time="27">j = nirs.modules.RenameStims( j );</command>
+<command execution_time="28">j = nirs.modules.KeepStims({'stim_channel6', 'stim_channel7'})</command>
+<command execution_time="37">j = nirs.modules.RenameStims( j );</command>
+<command batch="11">j.listOfChanges = {</command>
+<command batch="11">'A', 'cry';</command>
+<command batch="11" execution_time="35">'B', 'noise'};</command>
+<command execution_time="46">j = nirs.modules.Resample( j );</command>
+<command execution_time="25">j.Fs = 7.8125;</command>
+<command execution_time="33">j = nirs.modules.TrimBaseline( j );</command>
+<command execution_time="28">j.preBaseline  = 1;</command>
+<command execution_time="27">j.postBaseline = 1;</command>
+<command execution_time="36">j = nirs.modules.OpticalDensity( j );</command>
+<command execution_time="50">j = nirs.modules.BeerLambertLaw( j );</command>
+<command error="true" execution_time="88">hb = j.run( raw );</command>
+<command execution_time="50">clear</command>
+<command execution_time="25">clc</command>
+<command execution_time="24">root_dir = '/Users/hanxu/Downloads/prelim_data_nirs'</command>
+<command execution_time="2534">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="51">demographics = nirs.createDemographicsTable(raw);</command>
+<command execution_time="36">j = nirs.modules.KeepStims({'stim_channel6', 'stim_channel7'})</command>
+<command execution_time="24">j = nirs.modules.RemoveStimless();</command>
+<command batch="12">j = nirs.modules.KeepStims( j);</command>
+<command batch="12" execution_time="38">j.listOfStims = {'stim_channel6', 'stim_channel7'};</command>
+<command execution_time="26">j = nirs.modules.TrimBaseline( j);</command>
+<command execution_time="24">j.preBaseline = 1;</command>
+<command execution_time="25">j.postBaseline = 1;</command>
+<command execution_time="28">j = nirs.modules.Resample( j );</command>
+<command execution_time="24">j.Fs = 7.8125;</command>
+<command execution_time="51">j = nirs.modules.OpticalDensity( j);</command>
+<command execution_time="24">j = nirs.modules.BeerLambertLaw( j);</command>
+<command execution_time="108">j = nirs.modules.AR_IRLS();</command>
+<command execution_time="2035561">SubjStats = j.run(raw);</command>
+<command execution_time="10503">SubjStats(1).draw();</command>
+<command execution_time="260">hb_table1 = SubjStats(1).table</command>
+<command execution_time="111">hb_table2 = SubjStats(2).table</command>
+<command execution_time="111">hb_table3 = SubjStats(3).table</command>
+<command execution_time="140">hb_table4 = SubjStats(4).table</command>
+<command execution_time="134">hb_table5 = SubjStats(5).table</command>
+<command execution_time="138">hb_table6 = SubjStats(6).table</command>
+<command execution_time="137">hb_table7 = SubjStats(7).table</command>
+<command execution_time="137">hb_table8 = SubjStats(8).table</command>
+<command execution_time="152">hb_table9 = SubjStats(9).table</command>
+<command execution_time="145">hb_table10 = SubjStats(10).table</command>
+<command execution_time="167">hb_table11 = SubjStats(11).table</command>
+<command execution_time="160">hb_table12 = SubjStats(12).table</command>
+<command execution_time="154">hb_table13 = SubjStats(13).table</command>
+<command execution_time="166">hb_table14 = SubjStats(14).table</command>
+<command execution_time="170">hb_table15 = SubjStats(15).table</command>
+<command execution_time="168">hb_table16 = SubjStats(16).table</command>
+<command execution_time="157">hb_table17 = SubjStats(17).table</command>
+<command execution_time="160">hb_table18 = SubjStats(18).table</command>
+<command execution_time="152">hb_table19 = SubjStats(19).table</command>
+<command execution_time="154">hb_table20 = SubjStats(20).table</command>
+<command execution_time="34">c2 = [1 -1]</command>
+<command execution_time="38">c1 = [-1 1]</command>
+<command batch="13" error="true">ctable1 = ContrastStats1(1).table</command>
+<command batch="13" error="true" execution_time="515">ctable2 = ContrastStats2(1).table</command>
+<command batch="14" error="true">ContrastStats1 = SubjStats.ttest(c1);</command>
+<command batch="14" error="true" execution_time="102">ContrastStats2 = SubjStats.ttest(c2);</command>
+<command execution_time="138" repeat="2">hb_table1</command>
+<command error="true" execution_time="56">hb_table1(1)</command>
+<command execution_time="93">hb_table1(1,2)</command>
+<command execution_time="48">hb_table1(1:2,1:2)</command>
+<command execution_time="120">hb_table1(101:141,:)</command>
+<command execution_time="121">hb_table1(201:281,:)</command>
+<command execution_time="146">hb_table1(201:280,:)</command>
+<command execution_time="127">hb_table1 = hb_table1(201:280,:)</command>
+<command execution_time="34">clc</command>
+<command execution_time="75">hb_table2</command>
+<command execution_time="67">hb_table2 = hb_table2(201:280,:)</command>
+<command execution_time="78">hb_table3</command>
+<command execution_time="70">hb_table3 = hb_table3(201:280,:)</command>
+<command execution_time="81">hb_table4</command>
+<command execution_time="86">hb_table4 = hb_table4(201:280,:)</command>
+<command execution_time="73">hb_table4</command>
+<command execution_time="91">hb_table5</command>
+<command execution_time="96">hb_table5 = hb_table5(201:280,:)</command>
+<command execution_time="86">hb_table6 = hb_table6(201:280,:)</command>
+<command execution_time="87">hb_table7 = hb_table7(201:280,:)</command>
+<command execution_time="95">hb_table8</command>
+<command execution_time="105">hb_table8 = hb_table8(201:280,:)</command>
+<command execution_time="29">clc</command>
+<command execution_time="71">hb_table9</command>
+<command execution_time="64">hb_table9 = hb_table9(201:280,:)</command>
+<command execution_time="77">hb_table10</command>
+<command execution_time="66">hb_table10 = hb_table10(201:280,:)</command>
+<command execution_time="93">hb_table11</command>
+<command execution_time="69">hb_table11 = hb_table11(201:280,:)</command>
+<command execution_time="103">hb_table12</command>
+<command execution_time="80">hb_table12 = hb_table12(201:280,:)</command>
+<command execution_time="89">hb_table13</command>
+<command execution_time="90">hb_table13 = hb_table13(201:280,:)</command>
+<command execution_time="101">hb_table14</command>
+<command execution_time="91">hb_table14 = hb_table14(201:280,:)</command>
+<command execution_time="106">hb_table15</command>
+<command execution_time="112">hb_table15 = hb_table15(201:280,:)</command>
+<command execution_time="113">hb_table16</command>
+<command execution_time="106">hb_table16 = hb_table16(201:280,:)</command>
+<command execution_time="119">hb_table17</command>
+<command execution_time="105">hb_table17 = hb_table17(201:280,:)</command>
+<command execution_time="123">hb_table18</command>
+<command execution_time="117">hb_table18 = hb_table18(201:280,:)</command>
+<command execution_time="132">hb_table19</command>
+<command execution_time="120">hb_table19 = hb_table19(41:120,:)</command>
+<command execution_time="127">hb_table20</command>
+<command execution_time="120">hb_table20 = hb_table20(41:120,:)</command>
+<command execution_time="31">clc</command>
+</session>
+<session>
+<command time_stamp="16e6e269d0a">%-- 11/15/19, 1:20 AM --%</command>
+<command execution_time="30">root_dir = '/Users/hanxu/Downloads/prelim_data_nirs'</command>
+<command execution_time="344">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="29">j = nirs.modules.RemoveStimless();</command>
+<command execution_time="29">j = nirs.modules.KeepStims(j);</command>
+<command execution_time="26">j.listOfStims = {'stim_channel6', 'stim_channel7'};</command>
+<command execution_time="22">j = nirs.modules.TrimBaseline( j);</command>
+<command execution_time="22">j.preBaseline = 1;</command>
+<command execution_time="22">j.postBaseline = 1;</command>
+<command execution_time="24">j = nirs.modules.OpticalDensity( j);</command>
+<command execution_time="25">clear</command>
+<command execution_time="34">clc</command>
+<command error="true" execution_time="775">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="24">root_dir = '/Users/hanxu/Downloads/prelim_data_nirs'</command>
+<command execution_time="332">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="20">j = nirs.modules.RemoveStimless();</command>
+<command error="true" execution_time="27">j.listOfStims = {'stim_channel6', 'stim_channel7'};</command>
+<command execution_time="25">j = nirs.modules.KeepStims({'stim_channel6', 'stim_channel7'});</command>
+<command execution_time="21">j = nirs.modules.TrimBaseline( j);</command>
+<command execution_time="20">j.preBaseline = 1;</command>
+<command execution_time="23">j.postBaseline = 1;</command>
+<command execution_time="25">j = nirs.modules.OpticalDensity( j);</command>
+<command execution_time="30">j = nirs.modules.BeerLambertLaw( j);</command>
+<command execution_time="23">j = nirs.modules.AR_IRLS();</command>
+<command execution_time="188816">SubjStats = j.run(raw);</command>
+<command batch="15">hb_table1 = SubjStats(1).table</command>
+<command batch="15" execution_time="178">hb_table2 = SubjStats(2).table</command>
+<command batch="16" error="true">c1 = [-1 1]</command>
+<command batch="16" error="true">c2 = [1 -1]</command>
+<command batch="16" error="true">ContrastStats1 = SubjStats.ttest(c1);</command>
+<command batch="16" error="true" execution_time="89">ContrastStats2 = SubjStats.ttest(c2);</command>
+<command execution_time="374">raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});</command>
+<command execution_time="30">j = nirs.modules.RemoveStimless();</command>
+<command execution_time="30">j = nirs.modules.KeepStims({'stim_channel6', 'stim_channel7'});</command>
+<command execution_time="30">j = nirs.modules.TrimBaseline( j);</command>
+<command execution_time="31">j.preBaseline = 1;</command>
+<command execution_time="29">j.postBaseline = 1;</command>
+<command execution_time="30">j = nirs.modules.OpticalDensity( j);</command>
+<command execution_time="28">j = nirs.modules.BeerLambertLaw( j);</command>
+<command error="true" execution_time="65">hb = j.run( raw );</command>
+<command execution_time="61">j = nirs.modules.RemoveStimless();</command>
+<command execution_time="31">j = nirs.modules.KeepStims(j);</command>
+<command execution_time="31">j.listOfStims = {'stim_channel6', 'stim_channel7'};</command>
+<command execution_time="30">j = nirs.modules.TrimBaseline( j);</command>
+<command execution_time="31">j.preBaseline = 1;</command>
+<command execution_time="43">j.postBaseline = 1;</command>
+<command execution_time="30">j = nirs.modules.OpticalDensity( j);</command>
+<command execution_time="32">j = nirs.modules.BeerLambertLaw( j);</command>
+<command execution_time="1484">hb = j.run( raw );</command>
+<command execution_time="45">hb(1)</command>
+<command execution_time="67">j = nirs.modules.GLM();</command>
+<command execution_time="24">j.verbose = true;</command>
+<command execution_time="29">j.trend_func = @(t) nirs.design.trend.dctmtx(t, 0.08);</command>
+<command execution_time="24">j.basis = Dictionary();</command>
+<command execution_time="24">j.basis('default') = nirs.design.basis.Canonical();</command>
+<command batch="17">j.basis('X') = nirs.design.basis.Canonical();</command>
+<command batch="17" execution_time="38">j.basis('Y') = nirs.design.basis.Canonical();</command>
+<command execution_time="379356">SubjStats = j.run( hb );</command>
+<command execution_time="124">hb_table1 = SubjStats(1).table</command>
+<command batch="18" error="true">c1 = [-1 1]</command>
+<command batch="18" error="true">c2 = [1 -1]</command>
+<command batch="18" error="true">ContrastStats1 = SubjStats.ttest(c1);</command>
+<command batch="18" error="true" execution_time="114">ContrastStats2 = SubjStats.ttest(c2);</command>
+<command error="true" execution_time="2494">SubjStats(1).draw('tstat', [1 -1], 'p &lt; 0.05');</command>
+<command execution_time="1241">SubjStats(1).draw('tstat', [-10 10], 'p &lt; 0.05');</command>
+<command execution_time="1157">SubjStats(1).draw('tstat', [-1 1], 'p &lt; 0.05');</command>
+<command error="true" execution_time="77">ContrastStats1 = SubjStats.ttest(c1);</command>
+<command execution_time="50">j = nirs.modules.GLM()</command>
+<command error="true" execution_time="44">j.formula = 'beta ~ 1'</command>
+<command execution_time="87">j = nirs.modules.MixedEffects( );</command>
+<command execution_time="38">j.formula = 'beta ~ -1'</command>
+<command execution_time="28">j.dummyCoding = 'full';</command>
+<command execution_time="29">j.include_diagnostics=true;</command>
+<command error="true" execution_time="3477">GroupStats = j.run(SubjStats);</command>
+<command execution_time="37">j = nirs.modules.AddDemographics();</command>
+<command execution_time="236">j.demoTable = readtable('/Users/hanxu/Downloads/prelim_data_nirs/demographics.csv');</command>
+<command error="true" execution_time="120">SubjStats = j.run(SubjStats);</command>
+<command execution_time="25">j.varToMatch = 'subject';</command>
+<command error="true" execution_time="48">SubjStats = j.run(SubjStats);</command>
+<command execution_time="38">j = nirs.modules.AddDemographics();</command>
+<command execution_time="73">j.demoTable = readtable('/Users/hanxu/Downloads/prelim_data_nirs/demographics.csv');</command>
+<command execution_time="34">j.varToMatch = 'subject';</command>
+<command error="true" execution_time="61">SubjStats = j.run(SubjStats);</command>
+<command batch="19" error="true">j = nirs.modules.AddDemographics();</command>
+<command batch="19" error="true" execution_time="271">j.demoTable = readtable(csvpath);</command>
+<command execution_time="34">j = nirs.modules.AddDemographics();</command>
+<command execution_time="61">j.demoTable = readtable('/Users/hanxu/Downloads/prelim_data_nirs/demographics.csv');</command>
+<command execution_time="49" repeat="3">SubjStats = j.run(SubjStats);</command>
+<command execution_time="33">j = nirs.modules.MixedEffects( );</command>
+<command execution_time="33">j.formula = 'beta ~ -1'</command>
+<command execution_time="30">j.dummyCoding = 'full';</command>
+<command execution_time="32">j.include_diagnostics=true;</command>
+<command error="true" execution_time="866">GroupStats = j.run(SubjStats);</command>
+<command execution_time="59">hb = j.run( raw );</command>
+<command execution_time="143">hb_table1 = SubjStats(1).table</command>
+<command execution_time="30">clc</command>
+<command execution_time="23">clear</command>
+<command execution_time="30">job = nirs.modules.MixedEffects;</command>
+<command execution_time="24">job.formula = 'beta ~ -1 + group:cond + (1|subject)';</command>
+<command execution_time="3103">GroupStatsME = job.run(SubjStats);</command>
+<command execution_time="24">job.formula = 'beta ~ -1 + group:cond';</command>
+<command execution_time="779">GroupStatsFE = job.run(SubjStats);</command>
+<command execution_time="38">job=nirs.modules.AnovaN;</command>
+<command execution_time="26">job.variables={'cond','group','age','visit'};</command>
+<command execution_time="25">job.variables={'cond','group'};</command>
+<command execution_time="712">GroupTStats = job.run(SubjStats);</command>
+<command error="true" execution_time="35">GroupFStats.draw([],'q&lt;0.05');</command>
+<command execution_time="617">GroupTStats.draw([],'p&lt;0.05');</command>
+<command error="true" execution_time="47">GroupStatsFE.draw([], 'p&lt;0.05');</command>
+<command error="true" execution_time="45">GroupStatsFE.draw({'stim_channel6', 'stim_channel7'})</command>
+<command execution_time="33">job=nirs.modules.AnovaN;</command>
+<command execution_time="27">job.depvar = 'tstat';</command>
+<command execution_time="29">job.variables={'cond','group'};</command>
+<command execution_time="468">GroupTStats = job.run(SubjStats);</command>
+<command execution_time="540" repeat="2">GroupTStats.draw([],'p&lt;0.05');</command>
+</session>
+<session>
+<command time_stamp="16e6fcb99b0">%-- 11/15/19, 9:00 AM --%</command>
+</session>
+<session>
+<command time_stamp="16f265c0a8e">%-- 12/20/19, 7:49 PM --%</command>
+<command error="true" execution_time="6185">run('/Users/hanxu/Downloads/HomerOfflineConverter.m')</command>
+<command execution_time="36">folder = '/Users/hanxu/Downloads/prelim_data/1'</command>
+<command execution_time="3932" repeat="2">HomerOfflineConverter('/Users/hanxu/Downloads/prelim_data/5088/2019-05-29_003')</command>
+<command execution_time="30">prefdir</command>
+</session>
+</history>
