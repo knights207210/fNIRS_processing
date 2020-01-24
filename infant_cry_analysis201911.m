@@ -1,9 +1,3 @@
-% need explore:
-% 1. ANOVA group analysis
-% 2. the formula
-% FDR corrected Q value
-
-
 clear;
 clc;
 
