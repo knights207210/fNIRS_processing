@@ -8,11 +8,45 @@ clear;
 clc;
 
 %% group number
-group_number = 2;
+group_number = 1;
 
 %% load data
 root_dir = '/Users/hanxu/Downloads/fnirs_test'
 raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});
+
+%% Space Registration
+% add an anchor to attach the probe to the center of the forehead (FpZ)
+
+Name{1}='FpZ';
+xyz(1,:)=[0 0 0];
+Type{1}='FID-anchor';  % This is an anchor point
+Units{1}='mm';
+
+%Now add a few more
+Name{2}='Cz';
+xyz(2,:)=[0 100 0];
+Type{2}='FID-attractor';  % This is an attractor
+Units{2}='mm';
+
+Name{3}='T7';
+xyz(3,:)=[-200 0 0];
+Type{3}='FID-attractor';  % This is an attractor
+Units{3}='mm';
+
+Name{4}='T8';
+xyz(4,:)=[200 0 0];
+Type{4}='FID-attractor';  % This is an attractor
+Units{4}='mm';
+
+% now add these points to the optodes field in the probe. 
+fid=table(Name',xyz(:,1),xyz(:,2),xyz(:,3),Type',Units',...
+    'VariableNames',{'Name','X','Y','Z','Type','Units'});
+raw.probe.optodes=[raw.probe.optodes; fid];
+
+% Use the default head size
+probe1020=nirs.util.registerprobe1020(raw.probe);
+probe1020.defaultdrawfcn='10-20';
+probe1020.draw;
 
 %% Quality checking -> bad channel rejecting
 mkdir /Users/hanxu/Downloads/fnirs_test rawdata
@@ -98,14 +132,26 @@ for s = 1:size(raw)
     close;
 end
 
+%% Signal Preprocessing -> PCA
+mkdir /Users/hanxu/Downloads/fnirs_test preprocessing
+% motion correction to remove DC-shifts
+jobs = nirs.modules.BaselineCorrection(); 
+jobs.PCA=true;
+filtered_raw = jobs.run( raw );
+% visualize results
+for s = 1:size(filtered_raw)
+% view each subject's graph
+    filtered_raw(s).draw;
+    saveas(gcf,[root_dir,'/preprocessing/sub',num2str(s),'.png'])
+    close;
+end
 %% Run the conversions 
 mkdir /Users/hanxu/Downloads/fnirs_test conversion
 j = nirs.modules.OpticalDensity();
 %% the DFP parameters can be modified in nirs.modules.BeerLamberLaw.m
 %% Convert to hemoglobin
 j = nirs.modules.BeerLambertLaw( j);    
-hb = j.run( filtered_raw );
-
+hb = j.run(filtered_raw);
 % Results visualization
 for s = 1:size(hb)
 % view each subject's graph
@@ -114,6 +160,13 @@ for s = 1:size(hb)
     close;
 end
 
+%% Block Average
+mkdir /Users/hanxu/Downloads/fnirs_test blockAverage
+HRF=BlockAverage(-5, 15, hb)
+for i = 1:2
+    saveas(gcf,[root_dir,'/blockAverage/sub',num2str(s),'_', num2str(i),'.png'])
+    close;
+end
 %% Run the GLM
 j = nirs.modules.GLM();
 j.verbose = true;
@@ -124,12 +177,19 @@ j.type = 'AR-IRLS';
 % DCT terms with a frequency cutoff of 0.08.
 j.trend_func = @(t) nirs.design.trend.dctmtx(t, 0.08);
 
-% The FIR basis function
+%Canonical basis function
 j.basis = Dictionary();
-j.basis('default') = nirs.design.basis.FIR(); 
-j.basis('stim_channel6') = nirs.design.basis.FIR();
-j.basis('stim_channel7') = nirs.design.basis.FIR();
+j.basis('default') = nirs.design.basis.Canonical(); 
+j.basis('stim_channel6') = nirs.design.basis.Canonical();
+j.basis('stim_channel7') = nirs.design.basis.Canonical();
 SubjStats = j.run( hb );
+
+% The FIR basis function
+%j.basis = Dictionary();
+%j.basis('default') = nirs.design.basis.FIR(); 
+%j.basis('stim_channel6') = nirs.design.basis.FIR();
+%j.basis('stim_channel7') = nirs.design.basis.FIR();
+%SubjStats = j.run( hb );
 %% the parameters can be modified in nirs.design.basis.Canonical
 %% save GLM model
 mkdir /Users/hanxu/Downloads/fnirs_test GLM
@@ -140,6 +200,7 @@ end
 %% data view on individual level
 mkdir /Users/hanxu/Downloads/fnirs_test data_individual
 for s = 1:size(transpose(SubjStats))
+    %SubjStats(s).probe.defaultdrawfcn='3D mesh';
     SubjStats(s).draw('tstat', [], 'p < 0.05');
     for i = 1:4
         saveas(gcf,[root_dir,'/data_individual/sub',num2str(s),'_', num2str(i),'.png'])
@@ -163,37 +224,33 @@ for s = 1:size(transpose(SubjStats))
 end
 
 %% ROI Analysis Individual
+%Src - Det to include in the ROI
+MeasList=[1 1;...
+          1 2;...
+          1 6;...
+          2 3];
+      
+Region{1} = table(MeasList(:,1),MeasList(:,2),'VariableNames',{'source','detector'});
+ROItable=nirs.util.roiAverage(ContrastStats,Region,{'region1'});
+disp(ROItable);
+%%
 job_ROI = nirs.modules.ApplyROI();
-job_ROI.listOfROIs(1,:) = array2table({[2 2],[1 2],'left lPFC'});
-job_ROI.listOfROIs(2,:) = array2table({[2 2],[1 2],'left aPFC'});
-job_ROI.listOfROIs(3,:) = array2table({[3 3],[4 5],'right aPFC'});
-job_ROI.listOfROIs(4,:) = array2table({[3 4],[6 6],'right lPFC'});
-dataROI = job_ROI.run(SubjStats);
-
+job_ROI.listOfROIs = table(MeasList(1,1),MeasList(1,2),{'Edge1'},'VariableNames',{'source','detector','name'});
+job_ROI.listOfROIs(1,:) = table(MeasList(1,1),MeasList(1,2),{'Edge1'},'VariableNames',{'source','detector','name'});
+job_ROI.listOfROIs(2,:) = table(MeasList(2,1),MeasList(2,2),{'Edge2'},'VariableNames',{'source','detector','name'});
+job_ROI.listOfROIs(3,:) = table(MeasList(3,1),MeasList(3,2),{'Edge3'},'VariableNames',{'source','detector','name'});
+job_ROI.listOfROIs(4,:) = table(MeasList(4,1),MeasList(4,2),{'Edge4'},'VariableNames',{'source','detector','name'});
+job.weighted = true;
+dataROI = job_ROI.run( ContrastStats );
 %% visualize ROI analysis stats
 mkdir /Users/hanxu/Downloads/fnirs_test data_individual_ROI
-for s = 1:size(transpose(SubjStats))
+for s = 1:size(transpose(dataROI))
     dataROI(s).draw('tstat', [], 'p < 0.05');
-    for i = 1:4
+    for i = 1:2
         saveas(gcf,[root_dir,'/data_individual_ROI/sub',num2str(s),'_', num2str(i),'.png'])
         close;
     end
 end
-% contrast 
-% Define some contrasts
-c = [-1 1]
-
-mkdir /Users/hanxu/Downloads/fnirs_test contrast_individual_ROI
-for s = 1:size(transpose(SubjStats))
-    ContrastStats = SubjStats(s).ttest(c);
-    % Display the contrasts
-    ContrastStats.draw('tstat', [], 'p < 0.05');
-    for i = 1:2
-        saveas(gcf,[root_dir,'/contrast_individual_ROI/sub',num2str(s),'_', num2str(i),'.png'])
-        close;
-    end
-end
-
 
 %% Group Analysis
 %% remove outlier
@@ -258,43 +315,40 @@ for i = 1:2*size_c(1)
 end
 
 %% ROI Analysis Group
+%Src - Det to include in the ROI
+MeasList=[1 1;...
+          1 2;...
+          1 6;...
+          2 3];
+      
+Region{1} = table(MeasList(:,1),MeasList(:,2),'VariableNames',{'source','detector'});
+ROItable=nirs.util.roiAverage(ContrastStats,Region,{'region1'});
+disp(ROItable);
+%%
 job_ROI = nirs.modules.ApplyROI();
-job_ROI.listOfROIs(1,:) = array2table({[2 2],[1 2],'left lPFC'});
-job_ROI.listOfROIs(2,:) = array2table({[2 2],[1 2],'left aPFC'});
-job_ROI.listOfROIs(3,:) = array2table({[3 3],[4 5],'right aPFC'});
-job_ROI.listOfROIs(4,:) = array2table({[3 4],[6 6],'right lPFC'});
-dataROI = job_ROI.run(GroupStats);
+job_ROI.listOfROIs = table(MeasList(1,1),MeasList(1,2),{'Edge1'},'VariableNames',{'source','detector','name'});
+job_ROI.listOfROIs(1,:) = table(MeasList(1,1),MeasList(1,2),{'Edge1'},'VariableNames',{'source','detector','name'});
+job_ROI.listOfROIs(2,:) = table(MeasList(2,1),MeasList(2,2),{'Edge2'},'VariableNames',{'source','detector','name'});
+job_ROI.listOfROIs(3,:) = table(MeasList(3,1),MeasList(3,2),{'Edge3'},'VariableNames',{'source','detector','name'});
+job_ROI.listOfROIs(4,:) = table(MeasList(4,1),MeasList(4,2),{'Edge4'},'VariableNames',{'source','detector','name'});
+job.weighted = true;
+dataROI = job_ROI.run( ContrastStats );
 
 %% visualize ROI analysis stats
 mkdir /Users/hanxu/Downloads/fnirs_test data_group_ROI
 for s = 1:size(transpose(SubjStats))
     dataROI(s).draw('tstat', [], 'p < 0.05');
-    for i = 1:4
+    for i = 1:2
         saveas(gcf,[root_dir,'/data_individual_ROI/sub',num2str(s),'_', num2str(i),'.png'])
         close;
     end
 end
-% contrast 
-% Define some contrasts
-c = [-1 1]
-
-mkdir /Users/hanxu/Downloads/fnirs_test contrast_group_ROI
-for s = 1:size(transpose(SubjStats))
-    ContrastStats = SubjStats(s).ttest(c);
-    % Display the contrasts
-    ContrastStats.draw('tstat', [], 'p < 0.05');
-    for i = 1:2
-        saveas(gcf,[root_dir,'/contrast_individual_ROI/sub',num2str(s),'_', num2str(i),'.png'])
-        close;
-    end
-end
-
 %% Use mixed-effects group level to time-average subject-level
-HRF = GroupStats.HRF;
-nirs.viz.plot2D(HRF);
+%HRF = GroupStats.HRF;
+%nirs.viz.plot2D(HRF);
 
 % find HRF peak via visual inspection
 
-SubjStats_averaged_stimchannel6 = mean(SubjStats{'stim_channel6[3:8s]'})
-SubjStats_averaged_stimchannel7 = mean(SubjStats{'stim_channel7[3:8s]'})
+%SubjStats_averaged_stimchannel6 = mean(SubjStats{'stim_channel6[3:8s]'})
+%SubjStats_averaged_stimchannel7 = mean(SubjStats{'stim_channel7[3:8s]'})
 
