@@ -8,7 +8,7 @@ clear;
 clc;
 
 %% group number
-group_number = 1;
+group_number = 2;
 
 %% load data
 root_dir = '/Users/hanxu/Downloads/fnirs_test'
@@ -16,7 +16,9 @@ raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});
 
 %% Space Registration
 % add an anchor to attach the probe to the center of the forehead (FpZ)
-
+% TODO: The following code cannot be used for further visualizations yet.
+% Just used for a simple demostration on how to generate 10-20
+% need space registration information here
 Name{1}='FpZ';
 xyz(1,:)=[0 0 0];
 Type{1}='FID-anchor';  % This is an anchor point
@@ -41,14 +43,15 @@ Units{4}='mm';
 % now add these points to the optodes field in the probe. 
 fid=table(Name',xyz(:,1),xyz(:,2),xyz(:,3),Type',Units',...
     'VariableNames',{'Name','X','Y','Z','Type','Units'});
-raw.probe.optodes=[raw.probe.optodes; fid];
+raw(1).probe.optodes=[raw(1).probe.optodes; fid];
 
 % Use the default head size
-probe1020=nirs.util.registerprobe1020(raw.probe);
+probe1020=nirs.util.registerprobe1020(raw(1).probe);
 probe1020.defaultdrawfcn='10-20';
 probe1020.draw;
+close;
 
-%% Quality checking -> bad channel rejecting
+%% Quality checking 
 mkdir /Users/hanxu/Downloads/fnirs_test rawdata
 mkdir /Users/hanxu/Downloads/fnirs_test qualitycheck
 for s = 1:size(raw)
@@ -59,7 +62,10 @@ for s = 1:size(raw)
     close;
     
 % Change stimuli duration
-    raw(s) = nirs.viz.StimUtil(raw(s));
+    %raw(s) = nirs.viz.StimUtil(raw(s));
+    raw(s)=nirs.design.change_stimulus_duration(raw(s),'stim_channel6',10);
+    raw(s)=nirs.design.change_stimulus_duration(raw(s),'stim_channel7',10);
+    %raw(s).gui
 
 % turncate for quality checking
     pre_Baseline = 10;
@@ -81,7 +87,7 @@ for s = 1:size(raw)
   
    
     onset_firststi = data.stimulus.values{1,val6}.onset(1); 
-    disp(onset_firststi);
+    %disp(onset_firststi);
     onset_laststi = data.stimulus.values{1,val7}.onset(10);
     
     data = raw(s).data(round((onset_firststi-pre_Baseline)*fs):round((onset_laststi+post_Baseline)*fs),:);
@@ -118,6 +124,16 @@ j = nirs.modules.RemoveStimless();
 
 j = nirs.modules.KeepStims( j);
 j.listOfStims = {'stim_channel6', 'stim_channel7'};  % take a look at the raw data containing condition information, to see whether we can fix the condition information
+
+% rename stims
+j = nirs.modules.RenameStims( j );
+j.listOfChanges = {
+    'stim_channel6', 'infantCry'; 
+    'stim_channel7', 'infantNoise'};
+
+% resample to 4Hz
+j = nirs.modules.Resample( j );
+j.Fs = 4;  % Sets the new sample rate to 2Hz (was 10Hz).
 
 % Trim pre and post baseline
 j = nirs.modules.TrimBaseline( j);
@@ -160,12 +176,17 @@ for s = 1:size(hb)
     close;
 end
 
-%% Block Average
+%% Block Average for visualizations only
 mkdir /Users/hanxu/Downloads/fnirs_test blockAverage
-HRF=BlockAverage(-5, 15, hb)
-for i = 1:2
-    saveas(gcf,[root_dir,'/blockAverage/sub',num2str(s),'_', num2str(i),'.png'])
-    close;
+for s = 1:size(hb)
+    HRF=BlockAverage(-1, 19, hb(s));  %the parameters of start and end here is based on experimental protocols:Number of Trials: 20 trials
+                              %Trials by Stimuli: 10 trials control cry, 10 trials control noise ? 10s block
+                              %Pre/post durations: 10s pre-stim, 10s post-stim
+               
+    for i = 1:2
+        saveas(gcf,[root_dir,'/blockAverage/sub',num2str(s),'_', num2str(i),'.png'])
+        close;
+    end
 end
 %% Run the GLM
 j = nirs.modules.GLM();
@@ -200,7 +221,7 @@ end
 %% data view on individual level
 mkdir /Users/hanxu/Downloads/fnirs_test data_individual
 for s = 1:size(transpose(SubjStats))
-    %SubjStats(s).probe.defaultdrawfcn='3D mesh';
+    %SubjStats(s).probe.defaultdrawfcn='3D mesh'/'10-20';  % cannot work, error message 'No public field defaultdrawfcn exists for class nirs.core.Probe.'
     SubjStats(s).draw('tstat', [], 'p < 0.05');
     for i = 1:4
         saveas(gcf,[root_dir,'/data_individual/sub',num2str(s),'_', num2str(i),'.png'])
@@ -208,11 +229,12 @@ for s = 1:size(transpose(SubjStats))
     end
 end
 
-%% contrast on individual level
+%% contrast on individual level and ROI
 % Define some contrasts
 c = [-1 1]
 
 mkdir /Users/hanxu/Downloads/fnirs_test contrast_individual
+mkdir /Users/hanxu/Downloads/fnirs_test data_individual_ROI
 for s = 1:size(transpose(SubjStats))
     ContrastStats = SubjStats(s).ttest(c);
     % Display the contrasts
@@ -221,31 +243,32 @@ for s = 1:size(transpose(SubjStats))
         saveas(gcf,[root_dir,'/contrast_individual/sub',num2str(s),'_', num2str(i),'.png'])
         close;
     end
-end
 
 %% ROI Analysis Individual
-%Src - Det to include in the ROI
-MeasList=[1 1;...
-          1 2;...
-          1 6;...
-          2 3];
+%Src - Det to include in the ROI, need to be manually defined by ourself,
+%below is just sample Src-Det set
+
+    MeasList=[4 3;...
+            4 2;...
+            2 2;...
+            2 3];
       
-Region{1} = table(MeasList(:,1),MeasList(:,2),'VariableNames',{'source','detector'});
-ROItable=nirs.util.roiAverage(ContrastStats,Region,{'region1'});
-disp(ROItable);
+    Region{1} = table(MeasList(:,1),MeasList(:,2),'VariableNames',{'source','detector'});
+    ROItable=nirs.util.roiAverage(ContrastStats,Region,{'region1'});
+    disp(ROItable);
 %%
-job_ROI = nirs.modules.ApplyROI();
-job_ROI.listOfROIs = table(MeasList(1,1),MeasList(1,2),{'Edge1'},'VariableNames',{'source','detector','name'});
-job_ROI.listOfROIs(1,:) = table(MeasList(1,1),MeasList(1,2),{'Edge1'},'VariableNames',{'source','detector','name'});
-job_ROI.listOfROIs(2,:) = table(MeasList(2,1),MeasList(2,2),{'Edge2'},'VariableNames',{'source','detector','name'});
-job_ROI.listOfROIs(3,:) = table(MeasList(3,1),MeasList(3,2),{'Edge3'},'VariableNames',{'source','detector','name'});
-job_ROI.listOfROIs(4,:) = table(MeasList(4,1),MeasList(4,2),{'Edge4'},'VariableNames',{'source','detector','name'});
-job.weighted = true;
-dataROI = job_ROI.run( ContrastStats );
+    job_ROI = nirs.modules.ApplyROI();
+    job_ROI.listOfROIs = table(MeasList(1,1),MeasList(1,2),{'Edge1'},'VariableNames',{'source','detector','name'});
+    job_ROI.listOfROIs(1,:) = table(MeasList(1,1),MeasList(1,2),{'Edge1'},'VariableNames',{'source','detector','name'});
+    job_ROI.listOfROIs(2,:) = table(MeasList(2,1),MeasList(2,2),{'Edge2'},'VariableNames',{'source','detector','name'});
+    job_ROI.listOfROIs(3,:) = table(MeasList(3,1),MeasList(3,2),{'Edge3'},'VariableNames',{'source','detector','name'});
+    job_ROI.listOfROIs(4,:) = table(MeasList(4,1),MeasList(4,2),{'Edge4'},'VariableNames',{'source','detector','name'});
+    job.weighted = true;
+    dataROI = job_ROI.run( ContrastStats );
 %% visualize ROI analysis stats
-mkdir /Users/hanxu/Downloads/fnirs_test data_individual_ROI
-for s = 1:size(transpose(dataROI))
-    dataROI(s).draw('tstat', [], 'p < 0.05');
+
+    
+    dataROI.draw('tstat', [], 'p < 0.05');
     for i = 1:2
         saveas(gcf,[root_dir,'/data_individual_ROI/sub',num2str(s),'_', num2str(i),'.png'])
         close;
@@ -274,7 +297,7 @@ mkdir /Users/hanxu/Downloads/fnirs_test group_stats
 save([root_dir,'/group_stats/group_stats.mat'],'GroupStats');
 
 %% Visualize the group level stats
-mkdir /Users/hanxu/Downloads/prelim_data_nirs_test data_group
+mkdir /Users/hanxu/Downloads/fnirs_test data_group
 GroupStats.draw('tstat', [-10 10], 'p < 0.05')
 for i = 1:4*group_number
     saveas(gcf,[root_dir,'/data_group/',num2str(i),'.png'])
@@ -298,7 +321,7 @@ c = [eye(4);  % all 5 of the original variables
      1 -1 0 0; % G1 - G2 for X
      0 0 1 -1]; % G1 - G2 for Y
 %c = [1 -1 0 0]
-size_c = size(c)
+size_c = size(c);
 ContrastStats = GroupStats.ttest(c);
 ContrastStats.draw('tstat', [-5 5], 'p < 0.05');
 mkdir /Users/hanxu/Downloads/fnirs_test contrast_group
@@ -316,9 +339,9 @@ end
 
 %% ROI Analysis Group
 %Src - Det to include in the ROI
-MeasList=[1 1;...
-          1 2;...
-          1 6;...
+MeasList=[4 3;...
+          4 2;...
+          2 2;...
           2 3];
       
 Region{1} = table(MeasList(:,1),MeasList(:,2),'VariableNames',{'source','detector'});
@@ -336,19 +359,11 @@ dataROI = job_ROI.run( ContrastStats );
 
 %% visualize ROI analysis stats
 mkdir /Users/hanxu/Downloads/fnirs_test data_group_ROI
-for s = 1:size(transpose(SubjStats))
+for s = 1:size(dataROI)
     dataROI(s).draw('tstat', [], 'p < 0.05');
-    for i = 1:2
-        saveas(gcf,[root_dir,'/data_individual_ROI/sub',num2str(s),'_', num2str(i),'.png'])
+    for i = 1:2*size_c(1)
+        saveas(gcf,[root_dir,'/data_group_ROI/sub',num2str(s),'_', num2str(i),'.png'])
         close;
     end
 end
-%% Use mixed-effects group level to time-average subject-level
-%HRF = GroupStats.HRF;
-%nirs.viz.plot2D(HRF);
-
-% find HRF peak via visual inspection
-
-%SubjStats_averaged_stimchannel6 = mean(SubjStats{'stim_channel6[3:8s]'})
-%SubjStats_averaged_stimchannel7 = mean(SubjStats{'stim_channel7[3:8s]'})
 
