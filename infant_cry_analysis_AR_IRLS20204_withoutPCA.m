@@ -170,11 +170,10 @@ for s = 1:size(hb)
     close;
 end
 
-%% Signal Preprocessing -> PCA
+%% Signal Preprocessing -> Motion correction without PCA
 mkdir /Users/hanxu/Downloads/fnirs_test preprocessing
 % motion correction to remove DC-shifts
 jobs = nirs.modules.BaselineCorrection(); 
-jobs.PCA=true;
 hb = jobs.run( hb );
 % visualize results
 for s = 1:size(hb)
@@ -183,7 +182,6 @@ for s = 1:size(hb)
     saveas(gcf,[root_dir,'/preprocessing/sub',num2str(s),'.png'])
     close;
 end
-
 
 %% Block Average for visualizations only
 mkdir /Users/hanxu/Downloads/fnirs_test blockAverage
@@ -368,3 +366,4 @@ for s = 1:size(dataROI)
         close;
     end
 end
+
