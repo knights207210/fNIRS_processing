@@ -10,6 +10,7 @@
 %raw.probe.defaultdrawfcn='3D Mesh (top)'; 
 %figure
 %raw.probe.draw
+% for Aisling:  2. recommend Baseline Correction? 4. PCA
 clear;
 clc;
 
@@ -173,8 +174,8 @@ end
 %% Signal Preprocessing -> PCA
 mkdir /Users/hanxu/Downloads/fnirs_test preprocessing
 % motion correction to remove DC-shifts
-jobs = nirs.modules.BaselineCorrection(); 
-jobs.PCA=true;
+jobs = nirs.modules.PCAFilter(); 
+%jobs.PCA=true;
 hb = jobs.run( hb );
 % visualize results
 for s = 1:size(hb)
@@ -188,7 +189,7 @@ end
 %% Block Average for visualizations only
 mkdir /Users/hanxu/Downloads/fnirs_test blockAverage
 for s = 1:size(hb)
-    HRF=BlockAverage(-1, 19, hb(s));  %the parameters of start and end here is based on experimental protocols:Number of Trials: 20 trials
+    HRF=BlockAverage(-1, 19, hb(s),s);  %the parameters of start and end here is based on experimental protocols:Number of Trials: 20 trials
                               %Trials by Stimuli: 10 trials control cry, 10 trials control noise ? 10s block
                               %Pre/post durations: 10s pre-stim, 10s post-stim
                
