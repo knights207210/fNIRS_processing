@@ -39,7 +39,7 @@ root_dir = '/Users/hanxu/Downloads/fnirs_test'
 while(y<(k+1))
 figure 
 hold on
-suptitle(hb_data.stimulus.keys(1,y))
+sgtitle(hb_data.stimulus.keys(1,y))
 while(i<=t)
         subplot(num2,num,p) 
         hold on
