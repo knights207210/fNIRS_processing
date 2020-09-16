@@ -5,9 +5,11 @@
 % 5. ROI analysis
 % 6. Haven't done ANCOVA yet, need to ask about ANCOVA first
 % 7. raw.probe.defaultdrawfcn='10-20';
+% 8. find(conStats.ttest.p<0.05)
 %figure
 %raw.probe.draw
 %raw.probe.defaultdrawfcn='3D Mesh (top)'; 
+% nirs.io.loadNIRx
 %figure
 %raw.probe.draw
 % for Aisling:  2. recommend Baseline Correction? 4. PCA
@@ -18,6 +20,10 @@ clc;
 group_number = 2;
 
 %% load data
+%root_dir = '/Users/hanxu/Downloads/fnirs_test'
+%raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});
+%raw = nirs.io.loadNIRx(root_dir)
+
 root_dir = '/Users/hanxu/Downloads/fnirs_test'
 raw = nirs.io.loadDirectory(root_dir, {'group', 'subject'});
 
@@ -219,6 +225,7 @@ SubjStats = j.run( hb );
 mkdir /Users/hanxu/Downloads/fnirs_test GLM
 for s = 1:size(transpose(SubjStats))
     writetable(SubjStats(s).table,[root_dir,'/GLM/sub',num2str(s),'.txt'], 'Delimiter', ' '); 
+    writetable(SubjStats(s).table,[root_dir,'/GLM/sub',num2str(s),'.xls'], 'Delimiter', ' ');
 end
 
 %% data view on individual level
@@ -230,6 +237,7 @@ for s = 1:size(transpose(SubjStats))
         saveas(gcf,[root_dir,'/data_individual/sub',num2str(s),'_', num2str(i),'.png'])
         close;
     end
+    writetable(SubjStats(s).table,[root_dir,'/data_individual/SubjStatssub',num2str(s),'.xls'], 'Delimiter', ' ');
 end
 
 %% contrast on individual level and ROI
@@ -242,10 +250,12 @@ for s = 1:size(transpose(SubjStats))
     ContrastStats = SubjStats(s).ttest(c);
     % Display the contrasts
     ContrastStats.draw('tstat', [], 'p < 0.05');
+    
     for i = 1:2
         saveas(gcf,[root_dir,'/contrast_individual/sub',num2str(s),'_', num2str(i),'.png'])
         close;
     end
+    writetable(ContrastStats.table,[root_dir,'/contrast_individual/ContrastStatssub',num2str(s),'.xls'], 'Delimiter', ' ');
 
 %% ROI Analysis Individual
 %Src - Det to include in the ROI, need to be manually defined by ourself,
@@ -272,10 +282,12 @@ for s = 1:size(transpose(SubjStats))
 
     
     dataROI.draw('tstat', [], 'p < 0.05');
+    
     for i = 1:2
         saveas(gcf,[root_dir,'/data_individual_ROI/sub',num2str(s),'_', num2str(i),'.png'])
         close;
     end
+    writetable(dataROI.table,[root_dir,'/data_individual_ROI/dataROIsub',num2str(s),'.xls'], 'Delimiter', ' ');
 end
 
 %% Group Analysis
@@ -302,13 +314,17 @@ save([root_dir,'/group_stats/group_stats.mat'],'GroupStats');
 %% Visualize the group level stats
 mkdir /Users/hanxu/Downloads/fnirs_test data_group
 GroupStats.draw('tstat', [-10 10], 'p < 0.05')
+
 for i = 1:4*group_number
     saveas(gcf,[root_dir,'/data_group/',num2str(i),'.png'])
     close;
 end
+writetable(GroupStats.table,[root_dir,'/data_group/GroupStats','.xls'], 'Delimiter', ' ');
+
 %% FDR corrected (q < 0.05)
 mkdir /Users/hanxu/Downloads/fnirs_test data_FDRcorrected_group
 GroupStats.draw('tstat', [-5 5], 'q < 0.05')
+
 for i = 1:4*group_number
     saveas(gcf,[root_dir,'/data_FDRcorrected_group/',num2str(i),'.png'])
     close;
@@ -318,20 +334,24 @@ end
 %% display condition
 disp(GroupStats.conditions);
 %% run contrast
-c = [eye(4);  % all 5 of the original variables
-     1 0 -1 0; % X - Y for group 1
-     0 1 0 -1; % X - Y for group 2
-     1 -1 0 0; % G1 - G2 for X
-     0 0 1 -1]; % G1 - G2 for Y
-%c = [1 -1 0 0]
+%c = [eye(4);  % all 5 of the original variables
+     %1 0 -1 0; % X - Y for group 1
+     %0 1 0 -1; % X - Y for group 2
+     %1 -1 0 0; % G1 - G2 for X
+     %0 0 1 -1]; % G1 - G2 for Y
+c = [1 -1 0 0]
 size_c = size(c);
+mkdir /Users/hanxu/Downloads/fnirs_test contrast_group
 ContrastStats = GroupStats.ttest(c);
 ContrastStats.draw('tstat', [-5 5], 'p < 0.05');
-mkdir /Users/hanxu/Downloads/fnirs_test contrast_group
+
+
+
 for i = 1:2*size_c(1)
     saveas(gcf,[root_dir,'/contrast_group/',num2str(i),'.png'])
     close;
 end
+writetable(ContrastStats.table,[root_dir,'/contrast_group/ContrastStats','.xls'], 'Delimiter', ' ');
 %% FDR corrected (q < 0.05)
 ContrastStats.draw('tstat', [-5 5], 'q < 0.05');
 mkdir /Users/hanxu/Downloads/fnirs_test contrast_FDRcorrected_group
@@ -365,7 +385,8 @@ mkdir /Users/hanxu/Downloads/fnirs_test data_group_ROI
 for s = 1:size(dataROI)
     dataROI(s).draw('tstat', [], 'p < 0.05');
     for i = 1:2*size_c(1)
-        saveas(gcf,[root_dir,'/data_group_ROI/sub',num2str(s),'_', num2str(i),'.png'])
+        saveas(gcf,[root_dir,'/data_group_ROI/',num2str(s),'_', num2str(i),'.png'])
         close;
     end
+    writetable(dataROI(s).table,[root_dir,'/data_group_ROI/dataROI',num2str(s), '.xls'], 'Delimiter', ' ');
 end
