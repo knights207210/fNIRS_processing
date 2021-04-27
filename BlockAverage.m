@@ -34,12 +34,12 @@ q=1;
 y=1;
 optodes=table2array(HRF.probe.link(:,1:2));
 
-mkdir /Users/hanxu/Downloads/fnirs_test BlockAverage_rawdata
-root_dir = '/Users/hanxu/Downloads/fnirs_test'
+mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' BlockAverage_rawdata
+root_dir = '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/'
 while(y<(k+1))
 figure 
 hold on
-sgtitle(hb_data.stimulus.keys(1,y))
+suptitle(hb_data.stimulus.keys(1,y))
 while(i<=t)
         subplot(num2,num,p) 
         hold on
