@@ -1,0 +1,11 @@
+Some notes to run the script:
+
+1. upzip all the .zip files and put them in Matlab path.
+
+2. about which nirs toolbox version to use: I'm suggesting before line 418 (the beginning of nirs.modules.anova), we use the newest version ('nirs-toolbox-newest.zip'). After line 418, we use the older version ('nirs-toolbox-old.zip'). As discussed, the older version allows anova to generate "group:cond:session" interaction, not decomposed contrast. The reason why we need to use newest version before line 418 is the ROC part will better coordinate with the newest version. The newest version also supports "shortseparationchannel" when doing design matrix construction.
+
+3. about when to run ROC test: since the ROC test can be  **really** time consuming (each subject will cost several minutes to run), I highly suggest that we only run ROC test once and do manually checking once, which means that once we get all the ROC visualizations under evalwithROC folder, we don't run scripts between line 242 (beginning of generating ROC) to line 259 (don't need to generate a new "pipeline.xlsx") anymore. Once we get the ROC visualizations, we manually fill in the "pipeline.xlsx", and then we can directly use "pipeline.xlsx" to run the rest of the scripts, in all the future iterations. In the 'fnirsdata.zip', the "pipeline.xlsx" is included and can be directly used, which means we don't need to run between line 242 and line 259.
+
+4. The Matlab version is 2017b.
+
+5. about how to run blockaverage: for the script between line 293 and line 307, we need to make homer2 and BlockAverage.m ready. All we need to do is to put homer2 and BlockAverage.m in Matlab path. 
