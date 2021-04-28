@@ -5,7 +5,7 @@ clc;
 group_number = 2;
 
 %% load data
-root_dir = '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata'
+root_dir = 'rootdir'
 raw = nirs.io.loadDirectory(root_dir, {'group','subject','session'});
 
 %% Create demographics table
@@ -51,8 +51,8 @@ disp(demographics)
 %close;
 
 %% Quality checking 
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' rawdata
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' qualitycheck
+mkdir 'rootdir/' rawdata
+mkdir 'rootdir/' qualitycheck
 for s = 1:size(raw)
 % view each subject's graph
     data = raw(s);
@@ -118,7 +118,7 @@ end
 
 %% Prepare the data for preprocessing
 %% Remove stimless files
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' stimremove_turncate
+mkdir 'rootdir/' stimremove_turncate
 j = nirs.modules.RemoveStimless();
 
 % Just keep stim events for infant cry (these will change depending on the
@@ -151,7 +151,7 @@ for s = 1:size(raw)
 end
 
 %% Run the conversions 
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' conversion
+mkdir 'rootdir/' conversion
 j = nirs.modules.OpticalDensity();
 %% the DFP parameters can be modified in nirs.modules.BeerLamberLaw.m
 %% Convert to hemoglobin
@@ -240,7 +240,7 @@ job6.basis('infantNoise') = nirs.design.basis.Canonical();
 job6.AddShortSepRegressors = true;
 
 %% draw ROC to select
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' evalwithROC
+mkdir 'rootdir/' evalwithROC
 for s=1:size(hb)
     ROC=nirs.testing.ChannelStatsROC;
     ROC.simfunc=@()nirs.testing.simData(hb(s));
@@ -262,9 +262,9 @@ writetable(T_pipeline, [root_dir, '/pipeline.xlsx'])
 % that specific subject, don't need to worry about the order, just follow
 % the order in evalwithROC folder.
 %% Signal Preprocessing + GLM
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' preprocessing
+mkdir 'rootdir/' preprocessing
 %read fine-tune information from xlsx file.
-table_pipeline = readtable('/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/pipeline.xlsx');
+table_pipeline = readtable('rootdir/pipeline.xlsx');
 for s = 1:size(hb)
     if strcmp(table_pipeline.sID(s),hb(s).demographics.values(9)) & strcmp(table_pipeline.session(s),hb(s).demographics.values(10))
         disp(table_pipeline.sID(s));
@@ -291,7 +291,7 @@ for s = 1:size(hb)
 end
        
 %% Block Average for visualizations only
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' blockAverage
+mkdir 'rootdir/' blockAverage
 for s = 1:size(hb)
     HRF=BlockAverage(-1, 19, hb(s),s);  %the parameters of start and end here is based on experimental protocols:Number of Trials: 20 trials
                               %Trials by Stimuli: 10 trials control cry, 10 trials control noise ? 10s block
@@ -307,7 +307,7 @@ end
 
 
 %% save GLM model
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' GLM
+mkdir 'rootdir/' GLM
 for s = 1:size(transpose(SubjStats))
     writetable(SubjStats(s).table,[root_dir,'/GLM/sub',num2str(s),'.txt'], 'Delimiter', ' '); 
     writetable(SubjStats(s).table,[root_dir,'/GLM/sub',num2str(s),'.xls']);
@@ -315,7 +315,7 @@ end
 
 
 %% export for 2-nd level analysis
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' secondlevelAnalysis_exported
+mkdir 'rootdir/' secondlevelAnalysis_exported
 T_temp = table(repmat(SubjStats(1).demographics.values(9),80,1), repmat(SubjStats(1).demographics.values(10),80,1), repmat(SubjStats(1).demographics.values(8),80,1), SubjStats(1).variables.source, SubjStats(1).variables.detector, SubjStats(1).variables.type, SubjStats(1).variables.cond, SubjStats(1).beta, 'VariableNames', {'subjectID','session', 'group', 'source','detector', 'type', 'cond', 'beta'});
 for sID = 2:size(transpose(SubjStats)) 
     T_temp_loop = table(repmat(SubjStats(sID).demographics.values(9),80,1), repmat(SubjStats(sID).demographics.values(10),80,1), repmat(SubjStats(sID).demographics.values(8),80,1), SubjStats(sID).variables.source, SubjStats(sID).variables.detector, SubjStats(sID).variables.type, SubjStats(sID).variables.cond, SubjStats(sID).beta, 'VariableNames', {'subjectID','session', 'group', 'source','detector', 'type', 'cond', 'beta'}); 
@@ -324,7 +324,7 @@ end
 writetable(T_temp, [root_dir, '/secondlevelAnalysis_exported/exportedforSPSS.xls'])
 
 %% data view on individual level
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' data_individual
+mkdir 'rootdir/' data_individual
 for s = 1:size(transpose(SubjStats))
     %SubjStats(s).probe.defaultdrawfcn='3D mesh'/'10-20';  % cannot work, error message 'No public field defaultdrawfcn exists for class nirs.core.Probe.'
     SubjStats(s).probe.defaultdrawfcn='3D mesh';
@@ -340,8 +340,8 @@ end
 % Define some contrasts
 c = [-1 1]
 
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' contrast_individual
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' data_individual_ROI
+mkdir 'rootdir/' contrast_individual
+mkdir 'rootdir/' data_individual_ROI
 for s = 1:size(transpose(SubjStats))
     ContrastStats = SubjStats(s).ttest(c);
     % Display the contrasts
@@ -401,15 +401,15 @@ GroupFStats_ANOVAN = job.run(SubjStats);
 %%
 disp(GroupFStats_ANOVAN.conditions);
 %%
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' group_nway_ANOVA
+mkdir 'rootdir/' group_nway_ANOVA
 GroupFStats_ANOVAN.draw([],'p<0.05');  % first entry is the max scale (leave blank to autoscale)
 for i = 1:14
     saveas(gcf,[root_dir,'/group_nway_ANOVA/',num2str(i),'.png'])
     close;
- writetable(GroupFStats_ANOVAN.table,'/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/fdrn_way_ANOVATable.xls');
+ writetable(GroupFStats_ANOVAN.table,'rootdir/fdrn_way_ANOVATable.xls');
 end
 
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' FDRcorrected_group_nway_ANOVA
+mkdir 'rootdir/' FDRcorrected_group_nway_ANOVA
 GroupFStats_ANOVAN.draw([],'q<0.05');  % first entry is the max scale (leave blank to autoscale)
 for i = 1:14
     saveas(gcf,[root_dir,'/FDRcorrected_group_nway_ANOVA/',num2str(i),'.png'])
@@ -430,29 +430,29 @@ job.dummyCoding = 'full';
 % "effects"
 GroupStats_ANOVA = job.run(SubjStats);
 
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' group_stats_ANOVA
+mkdir 'rootdir/' group_stats_ANOVA
 save([root_dir,'/group_stats_ANOVA/group_stats_ANOVA.mat'],'GroupStats_ANOVA');
-writetable(GroupStats_ANOVA.table,'/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/ANOVATable.xls');
+writetable(GroupStats_ANOVA.table,'rootdir/ANOVATable.xls');
 %%
 disp(GroupStats_ANOVA.conditions);
 %% Visualize the group level stats - ANOVA
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' group_ANOVA
+mkdir 'rootdir/' group_ANOVA
 GroupStats_ANOVA.draw([], 'p < 0.05')
 
 for i = 1:1*group_number
     saveas(gcf,[root_dir,'/group_ANOVA/',num2str(i),'.png'])
     close;
 end
-writetable(GroupStats_ANOVA.table,'/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/ANOVATable2.xls');
+writetable(GroupStats_ANOVA.table,'rootdir/ANOVATable2.xls');
 
 %% FDR corrected (q < 0.05) - ANOVA
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' FDRcorrected_group_ANOVA
+mkdir 'rootdir/' FDRcorrected_group_ANOVA
 GroupStats_ANOVA.draw([], 'q < 0.05')
 
 for i = 1:1*group_number
     saveas(gcf,[root_dir,'/FDRcorrected_group_ANOVA/',num2str(i),'.png'])
     close;
- writetable(GroupStats_ANOVA.table,'/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/fdrANOVATable.xls');
+ writetable(GroupStats_ANOVA.table,'rootdir/fdrANOVATable.xls');
 end
 
 %% Use MixedEffects to check details 
@@ -469,13 +469,13 @@ job.dummyCoding = 'full';
 job.include_diagnostics=true;
 GroupStats = job.run(SubjStats);
 
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' group_stats
+mkdir 'rootdir/' group_stats
 save([root_dir,'/group_stats/group_stats.mat'],'GroupStats');
 %%
 disp(GroupStats.conditions);
 %% Visualize the group level stats
 %mkdir 'Y:\2_Individual_Projects\RISE_PV1_CannabisCry\06_22_2020_Prenatal_Processing\PV1\02.16.2021_finalprocessing\nocovariates' data_group
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' data_group
+mkdir 'rootdir/' data_group
 GroupStats.draw('tstat', [], 'p < 0.05')
 for i = 1:8*group_number
     saveas(gcf,[root_dir,'/data_group/',num2str(i),'.png'])
@@ -485,7 +485,7 @@ StatsTable=GroupStats.table;
 writetable(StatsTable,'GroupLevelResults.xls');
 %% FDR corrected (q < 0.05)
 %mkdir 'Y:\2_Individual_Projects\RISE_PV1_CannabisCry\06_22_2020_Prenatal_Processing\PV1\02.16.2021_finalprocessing\nocovariates' data_FDRcorrected_group
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' data_FDRcorrected_group
+mkdir 'rootdir/' data_FDRcorrected_group
 GroupStats.draw('tstat', [], 'q < 0.05')
 for i = 1:8*group_number
     saveas(gcf,[root_dir,'/data_FDRcorrected_group/',num2str(i),'.png'])
@@ -524,13 +524,13 @@ job.weighted = false;
 dataROI = job_ROI.run( GroupStats_ANOVA );
 
 % visualize ROI analysis stats 
-mkdir '/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/' data_group_ROI
+mkdir 'rootdir/' data_group_ROI
 for s = 1:size(dataROI)
     dataROI(s).draw([], 'q < 0.05');
      for i = 1:7*group_number
         saveas(gcf,[root_dir,'/data_group_ROI/',num2str(s),'_', num2str(i),'.png'])
         close;
     end
-    writetable(dataROI(s).table,'/Users/yichen/Downloads/fNIRS/untitled folder/fnirsdata/ROIFPTable.xls');
+    writetable(dataROI(s).table,'rootdir/ROIFPTable.xls');
 end
 
