@@ -419,12 +419,11 @@ end
 %% group models - mixedEffects model with ANOVA contrast
 % ANOVA first and then mixed effects to check detailed model information 
 job = nirs.modules.Anova();
-job.formula = 'beta ~ -1 + group:cond:session + (1|subject)'; 
+%job.formula = 'beta ~ -1 + group:cond:session + (1|subject)'; 
 % if to go with both main effects and interactions, do the following
 % formula 
-% job.formula = 'beta ~ cond + group + session + cond:group + cond:session +
-% group:session + cond:group:session + (1|subject)'
-job.dummyCoding = 'full';
+job.formula = 'beta ~ cond + group + session + cond:group + cond:session + group:session + cond:group:session + (1|subject)'
+job.dummyCoding = 'effects';
 % if to go with both main effects and interactions, do the following
 % dummyCoding
 % "effects"
