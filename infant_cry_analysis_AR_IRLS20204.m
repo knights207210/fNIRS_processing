@@ -110,12 +110,31 @@ for s = 1:size(raw)
     end
   
    
-    onset_firststi = data.stimulus.values{1,val6}.onset(1); 
-    %disp(onset_firststi);
-    onset_laststi = data.stimulus.values{1,val7}.onset(10);
+    onset_firststi_val6 = data.stimulus.values{1,val6}.onset(1); 
+    onset_firststi_val7 = data.stimulus.values{1,val7}.onset(1); 
     
-    data = raw(s).data(round((onset_firststi-pre_Baseline)*fs):round((onset_laststi+post_Baseline)*fs),:);
+    if onset_firststi_val6 < onset_firststi_val7
+        onset_firststi = onset_firststi_val6
+    else
+        onset_firststi = onset_firststi_val7
+    end
+    disp(onset_firststi);
+    %onset_laststi = data.stimulus.values{1,val7}.onset(10);
+    [z1_val6,z2_val6] = size(data.stimulus.values{1,val6}.onset);
+    [z1_val7,z2_val7] = size(data.stimulus.values{1,val7}.onset);
 
+    
+    onset_laststi_val6 = data.stimulus.values{1,val6}.onset(z1_val6);
+    onset_laststi_val7 = data.stimulus.values{1,val7}.onset(z1_val7);
+   
+    if onset_laststi_val6 > onset_laststi_val7
+        display(onset_laststi_val6);
+        data = raw(s).data(round((onset_firststi-pre_Baseline)*fs):round((onset_laststi_val6+post_Baseline)*fs),:);
+    else
+        display(onset_laststi_val7);
+        data = raw(s).data(round((onset_firststi-pre_Baseline)*fs):round((onset_laststi_val7+post_Baseline)*fs),:);
+    end  
+    
 % quality checking using cv, cv defined as dev/m
     m = mean(data);
     dev = std(data);
